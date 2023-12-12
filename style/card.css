@@ -1,0 +1,288 @@
+*{ 
+    padding: 0; 
+    margin: 0; 
+    border: 0; 
+    text-decoration: none; 
+    font-family: Inter;
+
+   } 
+    
+   :focus,:active{outline: none;} 
+   a:focus,a:active{outline: none;} 
+    
+   nav,footer,header,aside{display: block;} 
+    
+   :root{ 
+    --blue: #10069F; 
+    --yellow: #FFD700;
+   }  
+    
+   input,button,textarea{font-family:inherit;} 
+    
+   input::-ms-clear{display: none;} 
+   button{cursor: pointer;} 
+   button::-moz-focus-inner {padding:0;border:0;} 
+   a, a:visited{text-decoration: none;} 
+   a:hover{text-decoration: none;} 
+   ul li{list-style: none;} 
+   img{vertical-align: top;} 
+    
+   h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} 
+    
+   html{ 
+    scroll-behavior: smooth; 
+   }
+
+
+/* HEADER */
+
+.header{
+    height: 60px;
+    background-color: black;
+    border: 1px solid #000;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.logo {
+    height: 75px;
+    padding: 10px;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    color: #fff;
+    font-size: 16px;
+
+}
+.element{
+
+    color: #fff;
+    font-size: 16px;
+
+}
+.login-btn {
+    width: 125px;
+    height: 50px;
+    border-radius: 15px;
+    background: #10069F;
+    color: #fff;
+
+}
+
+/* MAIN */
+
+.main{
+    background-color: #000;
+    height: 800px;
+}
+
+
+.create__card {
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+}
+.form__card {
+}
+.feture__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #10069f9d;
+}
+.feture__card__title {
+    color: #FFF;
+font-family: Work Sans;
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+margin-top: 175px;
+}
+.card {
+    margin-top: 50px;
+    width: 450px;
+height: 300px;
+flex-shrink: 0;
+border-radius: 20px;
+border: 1px solid #000;
+perspective: 1000px; 
+background-color: var(--blue);
+transition: transform 0.5s ease;
+}
+
+
+.card__back {
+    display: none;
+    /* background-color: #ccc; */ /* Замініть це на колір або стилі, які вам потрібні */
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.card:hover .card__front {
+    display: none;
+}
+
+.card:hover .card__back {
+    display: flex;
+    backface-visibility: visible;
+}
+.card__back {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__front {
+    /*  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2; */
+/*     overflow: hidden; */
+}
+
+
+.card__front,
+.card__back {
+   /*  width: 100%;
+    height: 100%;
+    position: absolute; */
+    backface-visibility: hidden;
+}
+
+.card__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+
+
+.card:hover {
+    transform: rotateY(180deg); 
+}
+.card__top {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chip__card {
+}
+.company__card {
+}
+.card__middle {
+}
+.card__number {
+    color: #FFF;
+font-family: Work Sans;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 6.25px;
+text-align: center;
+}
+.card__bottom {
+    color: #FFF;
+font-family: Work Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+justify-content: space-between;
+padding: 0px 40px;
+
+margin-top: 50px;
+}
+.card__fullname {
+}
+.card__fullname-text {
+}
+.card__fullname-info {
+}
+.card__expires {
+}
+.card__expires-text {
+}
+.card__expires-number {
+}
+
+
+.black__line {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 450px;
+    height: 60px;
+    background-color: #000;
+}
+.white__line {
+    width: 450px;
+    height: 50px;   
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.CVV {
+    color: #000;
+font-family: Work Sans;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 6.25px;
+}
+
+.card__logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.image-company {
+    width: 100px;
+height: 100px;
+
+}
+
+
+
+/* LOAD */
+
+
+.mask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 50;
+}
+.mask.hide{
+    display: none;
+    
+}
+.mask img{
+    animation: 5s load infinite alternate;
+    
+}
+@keyframes load {
+    0%{
+        transform: translate(25px);
+    }
+    100%{
+        transform: translate(-25px);
+
+    }
+}
