@@ -86,6 +86,7 @@
 }
 .section__regestation {
     display: flex;
+    padding: 0px 60px;
     justify-content: space-evenly;
 }
 .regestration__text-box {
@@ -96,8 +97,11 @@
     margin-top: 150px;
 }
 
-.regestation__title{
-    font-size: 50px;
+.regestation__image{
+    width: 50px;
+    height: 50px;
+    margin: 0px auto;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2));
 
 }
 .regestration {
@@ -117,20 +121,24 @@
     width: 350px;
     height: 50px;
     font-size: 20px;
+    padding-left: 10px ;
 }
 .regestation__email {
+    padding-left: 10px ;
     border-radius: 20px;
     width: 350px;
     height: 50px;
     font-size: 20px;
 }
 .regestation__password {
+    padding-left: 10px ;
     border-radius: 20px;
     width: 350px;
     height: 50px;
     font-size: 20px;
 }
 .regestation__tel {
+    padding-left: 10px ;
     border-radius: 20px;
     width: 350px;
     height: 50px;
@@ -199,3 +207,192 @@ background: #FFD700;
 
     }
 }
+/* MODAL */
+
+
+.modal{
+    width: 300px;
+    height: 70px;
+    background-color: var(--yellow);
+    border-radius: 20px;
+    position: fixed;
+    right: -350px;
+    top: 30px;
+    padding: 15px;
+    display: block;
+    gap: 10px;
+    transition: 0.5s;
+}
+.modal.show{
+    right: 20px;
+}
+
+
+.modal img {
+    width: 30px;
+    height: 30px;
+} 
+
+/* MEDIA */
+
+
+
+
+
+/* Стилі для великих екранів (дисплей максимум 1199рх) */
+@media (max-width: 1199px) {
+
+    #efect{
+        left: -125px;
+    }
+    ¨.efect{
+        top: 700px;
+    }
+    .title{
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+ }
+
+/* Стилі для середніх екранів (дисплей максимум 991рх) */
+    @media (max-width: 991px) { 
+
+        #efect{
+            left: -150px;
+            box-shadow: 0px 0px 80px 80px var(--yellow);
+        }
+        ¨.efect{
+            top: 700px;
+        }
+
+     }
+
+     @media (max-width: 920px) {
+        .info__image-box{
+            display: none;
+        }
+        #efect{
+            left: -25px;
+            box-shadow: 0px 0px 50px 50px var(--yellow);
+        }
+        ¨.efect{
+            top: 800px;
+
+        }
+        .info__button{
+            height: 50px;
+            width: 250px;
+            font-size: 20px;
+        }
+        .login-btn{
+            width: 50px;
+        }
+     }
+
+     @media (max-width: 820px) {
+        .title{
+            display: none;
+        }
+        .efect{
+            left: 107vw;
+            top: 160px;
+        }
+     }
+
+
+
+/* Стилі для малих екранів (дисплей максимум 767рх) */
+    @media (max-width: 767px) { 
+        .img-menu{
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-left: 150px;
+        }
+        .list{
+            display: none;
+        }
+        #efect{
+            display: none;
+        }
+        .efect{
+            display: none;
+
+        }
+        
+        
+        
+        
+    }
+    
+    /* Стилі для дуже малих екранів (дисплей максимум 575рх) */
+    @media (max-width: 575px) {
+   
+        .info__title {
+            color: #FFF;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 800;
+            font-family: Inter;
+            line-height: normal;
+        }
+        .info__subtitle {
+            font-family: Inter;
+            color: #FFF;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        
+        
+        
+        }
+
+        @media (max-width: 440px) {
+            
+            .info__title {
+                color: #FFF;
+                font-size: 45px;
+                font-style: normal;
+                font-weight: 800;
+                font-family: Inter;
+                line-height: normal;
+            }
+            .info__subtitle {
+                font-family: Inter;
+                color: #FFF;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            input{
+                width: 275px!important;
+            }
+
+            .regestration__button{
+                width: 275px!important;
+            }
+            
+            .regestation{
+                height: 450px;
+            }
+
+        }
+        @media (max-width: 375px) {
+            input{
+                width: 200px!important;
+            }
+
+            .regestration__button{
+                width: 200px!important;
+            }
+           
+            .regestation{
+                height: 370px;
+            }
+
+        }

@@ -6,8 +6,10 @@
     <title>Home</title><!-- Smart Bank -->
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+
 </head>
 <body>
     <div class="mask">
@@ -26,7 +28,8 @@
             <ul class="news element">Новини</ul>
             <ul class="support element">Підтримка</ul>
         </nav>
-        <a href="./Html/regestration.html">
+        <img src="./image/icons8-menu-100.png" alt="Menu" class="img-menu">
+        <a href="./pages/regestration.html">
         <button class="login-btn">Увійти</button>
 
         </a>
@@ -36,7 +39,7 @@
             <div class="info__text-box">
                 <h2 class="info__title">SmartBank</h2>
                 <p class="info__subtitle">Твій накращий банк</p>
-                <a href="./Html/regestration.html">
+                <a href="./pages/regestration.html">
                     <button class="info__button">Стати клієнтом</button>
             
                     </a>
@@ -45,10 +48,203 @@
                 <img src="./image/cards.png" alt="Card" class="card-img">
             </div>
         </section>
-        <div class="efect"></div>
-        <div id="efect"></div>
+        <section class="dashboard">
+            <h2 class="dashboard__title">
+                Дашбоард
+            </h2>
+            <div class="dashboard__body">
+                <div class="dashboard__box">
+                    <div class="dashboard-circle">
+                        <img src="./image/customers.png" id="customers" alt="" class="dashboard-icon">
+                    </div>
+                    <p class="dashboard__box-info">
+                        8,2 млн
+                    </p>
+                    <p class="dashboard__box-text">клієнтів</p>
+                    <p class="dashboard__box-number">8 244 750</p>
+                </div>
+                <div class="dashboard__box">
+                    <div class="dashboard-circle" id="cart">
+                        <img src="./image/cart.png" alt="" class="dashboard-icon">
+                    </div>                   
+                        <p class="dashboard__box-info">
+                        7,6 млрд
+                    </p>
+                    <p class="dashboard__box-text">покупок</p>
+                    <p class="dashboard__box-number">7 648 540 329</p>
+                </div>
+                <div class="dashboard__box">
+                    <div class="dashboard-circle" id="wallet">
+                        <img src="./image/wallet.png"  alt="" class="dashboard-icon">
+                    </div>                    
+                    <p class="dashboard__box-info">
+                        4,5 трлн
+                    </p>
+                    <p class="dashboard__box-text">витрачено</p>
+                    <p class="dashboard__box-number">4 573 671 358 867</p>
+                </div>
+                <div class="dashboard__box">
+                    <div class="dashboard-circle" id="gift">
+                        <img src="./image/gift.png" alt="" class="dashboard-icon">
+                    </div>                   
+                    <p class="dashboard__box-info">
+                        7,2 млрд
+                    </p>
+                    <p class="dashboard__box-text">кешбека</p>
+                    <p class="dashboard__box-number">7 340 954 378</p>
+                </div>
+            </div>
+        </section>
+        <section class="preference">
+            <h2 class="preference-title">
+                Переваги банку
+            </h2>
+            <div class="preference__block">
+                <div class="preference__box">
+                    <h2 class="preference__box-subtitle">
+                        Пільговий період
+                    </h2>
+                    <h2 class="preference__box-title">
+                        Скористайтеся пільговим періодом у 62 дні
+                    </h2>
+                    <p class="preference__box-info">
+                        Ексклюзивний пільговий період тривалістю 62 днів! Здійснюйте покупки з нульовими відсотками на кредит протягом двох місяців.
+                    </p>
+                </div>
+                <div class="preference__box">
+                    <h2 class="preference__box-subtitle">
+                        Кешбек   
+                    </h2>
+                    <h2 class="preference__box-title">
+                        Повертайте до 25% від суми покупки
+                    </h2>
+                    <p class="preference__box-info">
+                        Щомісяця ви зможете вибрати 3 категорії витрат, за якими будете отримувати кешбек (наприклад, Кіно або Фастфуд).                    </p>
+                </div>
+                <div class="preference__box">
+                    <h2 class="preference__box-subtitle">
+                        Apple Pay та Google Pay
+                    </h2>
+                    <h2 class="preference__box-title">
+                        Геть гаманці
+                    </h2>
+                    <p class="preference__box-info">
+                        Не потрібно замовляти пластикову картку — оплачуйте всі покупки смартфоном
+                    </p>
+                </div>
+                <div class="preference__box">
+                    <h2 class="preference__box-subtitle">
+                        Відсоткова ставка
+                    </h2>
+                    <h2 class="preference__box-title">
+                        Отримуйте вигоду з  відсотковою ставкою в 2.5%
+                    </h2>
+                    <p class="preference__box-info">
+                        Вигідна відсоткова ставка всього 2.5%! Зекономте гроші при використанні наших фінансових послуг з низькими відсотками.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="newcard">
+            <h2 class="newcard-title">Як відкрити карту?</h2>
+            <div class="newcard__block">
+                <div class="newcard__box">
+                    <div class="newcard__icon-box">
+                        <img src="./image/male-technologist.png" alt="" class="newcard__icon">
+                    </div>
+                    <p class="newcard__box-title">Пройти швидку 
+                        реєстрацію</p>
+                </div>
+                <div class="newcard__box">
+                    <div class="newcard__icon-box">
+                        <img src="./image/credit_card.png" alt="" class="newcard__icon">
+                    </div>
+                    <p class="newcard__box-title">Пройти швидку 
+                        реєстрацію</p>
+                </div>
+                <div class="newcard__box">
+                    <div class="newcard__icon-box">
+                        <img src="./image/sunglasses.png" alt="" class="newcard__icon">
+                    </div>
+                    <p class="newcard__box-title">Пройти швидку 
+                        реєстрацію</p>
+                </div>
+            </div>
+            <button class="newcard__button">Відкрити зараз</button>
+        </section>
+        <section class="support__section">
+            <img src="./image/telephone_receiver.png" alt="" class="support-icon">
+            <h2 class="support__title">
+                24/7 підтримка
+            </h2>
+            <div class="support__block">
+                <a href="">
+                    <div class="support__box-icon">
+                        <img src="./image/telegram-100.png" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="support__box-icon">
+                        <img src="./image/viber-100.png" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="support__box-icon">
+                        <img src="./image/chat-bot-100.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__left">
+                <img src="./image/logo.png" alt="" class="footer__left-logo">
+                <p class="footer__left-txt">
+                    Покращуй життя використовуючи наш банк
+                </p>
+                <div class="footer__left__block">
+                    <div class="footer__box-cards">
+                        <h2 class="box__cards-title">Картки</h2>
+                        <a href="">
+                            <p class="box__cards-name">Чорна карта</p>
+                        </a>
+                        <a href="">
+                            <p class="box__cards-name">Біла карта</p>
+                        </a>
+                        <a href="">
+                            <p class="box__cards-name">Дитяча карта</p>
+                        </a>
+                    </div>
+                    <div class="footer__box-about">
+                        <h2 class="box__about-title">Банк</h2>
+                        <a href="">
+                            <p class="box__about-name">Про банк</p>
+                        </a>
+                        <a href="">
+                            <p class="box__about-name">Умови користування</p>
+                        </a>
+                        <a href="">
+                            <p class="box__about-name">Контакти</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__right">
+                <button class="support__btn__Ukraine">
+                    Підтримати Україну 🇺🇦
+                </button>
+                <div class="footer__right-box">
+                    <img src="./image/instagram-100.png" alt="" class="social-img">
+                    <img src="./image/facebook-100.png" alt="" class="social-img">
+                    <img src="./image/tiktok-100.png" alt="" class="social-img">
+                    <img src="./image/youtube-100.png" alt="" class="social-img">
+                </div>
+                <p class="about__bank">АТ «СМАРТ БАНК» 
+                    Ліцензія НБУ №95 від 01.01.2024, 
+                    Номер у держреєстрі банків № 300</p>
+            </div>
+        </footer>
     </main>
-   <!--  <a href="./Html/regestration.html">
+   <!--  <a href="./pages/regestration.html">
         Зарегеструватися
     </a> -->
     <script src="./script/script.js"></script>
