@@ -10,6 +10,7 @@ const modalImage = document.querySelector('.modal-img');
 
 
 
+tel.value = "+380"
 
 btnSumbit.addEventListener('click', function (event) {
     event.preventDefault()

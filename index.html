@@ -5,13 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title><!-- Smart Bank -->
     <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
 
 </head>
-<body>
+<body class="body">
+    <div class="modal__cards">
+        <img src="./image/close-100.png" alt="" class="modal-btn">
+        <h2 class="modal__cards-title">Обирай потрібну карту</h2>
+        <div class="modal__block">
+            <a href="./pages/blackcard.html">
+            <div class="modal__cards-box">
+                <div class="modal-card card-black">
+                    <div class="modal-card__top">
+                        <img src="./image/chip card.png" alt="" class="modal__card-chip">
+                        <img src="./image/Mastercard Logo.png" alt="" class="modal__card-company">
+                    </div>
+                    <p class="modal__card-number">5168 7000 1234 5432</p>
+                    <p class="modal__card-data">09/27</p>
+                </div>
+                <p class="modal__card-name">Чорна карта</p>
+                <p class="modal__card-info">Престижна картка підкреслює статус власника. Це найвищий рівень турботи, безпеки і конфіденційності. </p>
+            </div>
+            </a>
+            <a href="">
+            <div class="modal__cards-box">
+                <div class="modal-card card-pink">
+                    <div class="modal-card__top">
+                        <img src="./image/chip card.png" alt="" class="modal__card-chip">
+                        <img src="./image/Mastercard Logo.png" alt="" class="modal__card-company">
+                    </div>
+                    <p class="modal__card-number">5168 7000 1234 5432</p>
+                    <p class="modal__card-data">09/27</p>
+                </div>
+                <p class="modal__card-name">Дитяча карта</p>
+                <p class="modal__card-info"> Картка для клієнтів від 6 до 14 років. Включає в себе батьківський контроль, а також цікаві можливості. </p>
+            </div>
+            </a>
+            <a href="">
+            <div class="modal__cards-box">
+                <div class="modal-card card-white">
+                    <div class="modal-card__top">
+                        <img src="./image/chip card.png" alt="" class="modal__card-chip">
+                        <img src="./image/Mastercard Logo.png" alt="" class="modal__card-company">
+                    </div>
+                    <p class="modal__card-number" style="color: black;">5168 7000 1234 5432</p>
+                    <p class="modal__card-data" style="color: black;">09/27</p>
+                </div>
+                <p class="modal__card-name">Біла карта</p>
+                <p class="modal__card-info"> Прості перекази, оплата комуналки, функціональна виписка, налаштування картки - тепер у вашій кишені!</p>
+            </div>
+            </a>
+        </div>
+      
+        
+    </div>
     <div class="mask">
         <div class="load">
             <img src="./image/logo.png" alt="" width="200px">
@@ -23,7 +74,7 @@
         </a>
         <nav class="list">
             <a href="./index.html">
-                <ul class="home element">Головна</ul>
+                <ul class="cards element">Картки</ul>
             </a>            
             <ul class="news element">Новини</ul>
             <ul class="support element">Підтримка</ul>
@@ -229,9 +280,11 @@
                 </div>
             </div>
             <div class="footer__right">
-                <button class="support__btn__Ukraine">
-                    Підтримати Україну 🇺🇦
-                </button>
+                <a href="https://prytulafoundation.org/" target="_blank">
+                    <button class="support__btn__Ukraine">
+                        Підтримати Україну 🇺🇦
+                    </button>
+                </a>
                 <div class="footer__right-box">
                     <img src="./image/instagram-100.png" alt="" class="social-img">
                     <img src="./image/facebook-100.png" alt="" class="social-img">
