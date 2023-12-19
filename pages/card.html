@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/card.css">
+    <link rel="stylesheet" href="../style/CardModal.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
 </head>
@@ -39,9 +40,43 @@
                         <img src="../image/back.png" alt="" width="50px" style="padding: 20px;">
                     </a>
                 </div>
-                <!-- This will be form -->
-                <form>
-                    <h3 class="title">Відкрити нову карту</h3>
+                
+                <form class="create__card-form" >
+                    <div class="create-form-Fullname">
+                        <input type="text" name="" id="" class="create-form-name" placeholder="Ім'я">
+                        <input type="text" name="" id="" class="create-form-surname"  placeholder="Прізвище">
+                    </div>
+                    <div class="create-form-box-card">
+                        <div class="mini-card-box">
+                            <div class="mini-card --black">
+                                <div class="mini-card-chip"></div>
+                                <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                            </div>
+                            <input type="radio" name="" id="" class="radio-black">
+                        </div>
+                        <div class="mini-card-box">
+                            <div class="mini-card --pink">
+                                <div class="mini-card-chip "></div>
+                                <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                            </div>
+                            <input type="radio" name="" id="" class="radio-pink">
+                        </div>
+                        <div class="mini-card-box">
+                            <div class="mini-card --white">
+                                <div class="mini-card-chip "></div>
+                                <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                            </div>
+                            <input type="radio" name="" id="" class="radio-white">
+                        </div>
+                    </div>
+                        <div class="create-form-box-valuta">
+                            <p class="USD Valuta">USD</p>
+                            <p class="UAH Valuta">UAH</p>
+                            <p class="EUR Valuta">EUR</p>
+                        </div>
+                        <button class="create-form-btn">Оформити карту</button>
+                        <p class="info-btn">Натискаючи на оформити карту ви погоджуєтеся з нашими користувацькими правилами</p>
+                    
                 </form>
             </div>
             <div class="feture__card">
@@ -53,7 +88,7 @@
                             <img src="../image/Mastercard Logo.png" alt="" class="company__card">
                         </div>
                         <div class="card__middle">
-                            <p class="card__number">5160 7560 1872 4235</p>
+                            <p class="card__number">3750 87** **** ****</p>
                         </div> 
                         <div class="card__bottom">
                             <div class="card__fullname">

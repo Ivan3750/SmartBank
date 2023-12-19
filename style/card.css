@@ -253,6 +253,169 @@ height: 100px;
 
 
 
+.create__card-form {
+    border-radius: 30px;
+    background: linear-gradient(220deg, #FFD700 2.19%, #FFAF00 95.99%);
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.create-form-title {
+}
+.create-form-Fullname {
+    padding-top: 30px;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.create-form-name {
+    width: 186px;
+height: 42px;
+border-radius: 20px;
+flex-shrink: 0;
+}
+.create-form-surname {
+    border-radius: 20px;
+    width: 186px;
+height: 42px;
+flex-shrink: 0;
+}
+.create-form-box-card {
+    padding: 40px 0px;
+}
+.create-form-box-valuta {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.USD:hover{
+    cursor: pointer;
+}
+.UAH:hover{
+    cursor: pointer;
+}
+.EUR:hover{
+    cursor: pointer;
+}
+.USD {
+    width: 150px;
+height: 40px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+}
+.UAH {
+    width: 150px;
+height: 40px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+}
+.EUR {
+    width: 150px;
+height: 40px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+}
+.create-form-btn {
+height: 50px;
+    color: #FFF;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+    border-radius: 20px;
+background: linear-gradient(267deg, #0095FF 10.17%, #10069F 133.23%);
+}
+
+.info-btn{
+    color: #000000;
+}
+
+input{
+    padding-left: 10px;
+}
+
+.create-form-box-card{
+    display: flex;
+    justify-content: space-between;
+}
+.mini-card-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.mini-card-box:hover{
+    cursor: pointer;
+
+}
+
+.mini-card {
+    width: 105px;
+height: 74px;
+flex-shrink: 0;
+background-color: #000;
+border-radius: 20px;
+display: flex;
+
+}
+.mini-card:nth-child(2){
+    border-radius: 20px;
+    background: #E1447D;
+}
+.mini-card-chip {
+    width: 12px;
+height: 8px;
+flex-shrink: 0;
+border-radius: 2px;
+background: #FFD700;
+margin-top: 20px;
+margin-left: 15px;
+}
+.mini-card-img {
+    width: 20px;
+    height: 20px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+input[type="radio"]{
+    border: 0;
+}
+
+.--black{
+    background-color: #000;
+}
+.--pink{
+    border-radius: 20px;
+    background: #E1447D;}
+.--white{
+    background-color: #fff;
+}
+
+
+.info-btn{
+    margin-top: 10px;
+    color: #000;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 /* LOAD */
 
 
@@ -283,3 +446,5 @@ height: 100px;
 
     }
 }
+
+
