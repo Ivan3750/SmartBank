@@ -227,7 +227,7 @@ line-height: normal;
 .header{
     height: 60px;
     background-color: black;
-    border: 1px solid #000;
+    border: 1px solid #fe0000;
     display: flex;
     color: #fff;
     align-items: center;
@@ -248,9 +248,10 @@ line-height: normal;
     justify-content: space-between;
     align-items: center;
     min-width: 250px;
-    max-width: 350px;
+    max-width: 500px;
     color: #fff;
     font-size: 16px;
+    gap: 25px;
 
 }
 
@@ -274,6 +275,8 @@ line-height: normal;
     color: #fff;
 
 }
+
+
 
 
 /* MAIN */
@@ -328,6 +331,49 @@ line-height: normal;
     margin-top: 20px;
 }
 .card-img {
+}
+
+.mobile-list{
+    top: -105%;
+    transition: 0.4s;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    
+}
+.mobile-nav{
+    display: flex;
+    gap: 20px;
+}
+.mobile-list.show{
+    top: 0;
+    background-color: #000000;
+    display: flex;
+
+}
+.mobile-list.show nav{
+    border: 5px solid #00ff6e;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+.close-btn{
+    display: none;
+}
+
+.mobile-list.show .close-btn{
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
 }
 
 
@@ -440,6 +486,7 @@ margin-left: 10px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0px 60px;
+    padding: 0px 20px;
 }
 .preference__box {
     border-radius: 80px;
@@ -500,7 +547,7 @@ line-height: normal;
     background: linear-gradient(67deg, #0095FF -36.62%, #10069F 197.64%);
     margin: 0px auto;
     padding: 85px 70px 85px 70px;
-    margin: 20px;
+    margin: 0px auto;
 }
 .newcard-title {
     color: #FFF;
@@ -748,10 +795,9 @@ margin: 10px auto;
 
 
 
-/* 
 *{
-    outline:  2px solid #fff;
-} */
+    outline:  2px solid #ff0000;
+}
 
 
 
@@ -811,6 +857,9 @@ margin: 10px auto;
         padding: 0px 20px;
         gap: 20px;
     }
+    .newcard{
+        margin: 20px;
+    }
 
  }
 
@@ -839,6 +888,9 @@ margin: 10px auto;
 
 }
      @media (max-width: 920px) {
+        .dashboard__title{
+            text-align: center;
+        }
         .info__image-box{
             display: none;
         }
@@ -878,10 +930,42 @@ margin: 10px auto;
             margin: 0;
             text-align: center;
         }
+        .support__btn__Ukraine{
+            width: 200px;
+            font-size: 14px;
+            height: 40px;
+        }
+        .footer__right-box{
+            width: 200px;
+            flex-wrap: wrap;
+            height: auto;
+            border-radius: 20px;
+            padding: 5px;
+        }
+        .social-img{
+            width: 45px;
+            height: 45px;
+        }
+        .info-btn{
+            font-size: 20px;
+        }
+        .about__bank {
+            margin: 0px;
+            margin-top: 20px;
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+        }
      }
 
 /* Стилі для малих екранів (дисплей максимум 767рх) */
     @media (max-width: 767px) { 
+        .login-btn{
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+        }
         .img-menu{
             display: block;
             width: 50px;
@@ -903,8 +987,29 @@ margin: 10px auto;
             font-size: 40px;
         }
         .support__box-icon img{
-            width: 115px;
-            height: 115px;
+            width: 75px;
+            height: 75px;
+        }
+        .newcard__block{
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .info__title {
+            color: #FFF;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 800;
+            font-family: Inter;
+            line-height: normal;
+        }
+        .info__subtitle {
+            font-family: Inter;
+            color: #FFF;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
         }
         
         
@@ -915,30 +1020,68 @@ margin: 10px auto;
     /* Стилі для дуже малих екранів (дисплей максимум 575рх) */
     @media (max-width: 575px) {
    
-        .info__title {
-            color: #FFF;
-            font-size: 60px;
-            font-style: normal;
-            font-weight: 800;
-            font-family: Inter;
-            line-height: normal;
+        
+.preference__box-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.preference__box-title {
+    margin-top: 20px;
+    color: #FFF;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.preference__box-info {
+    margin-top: 20px;
+    color: #FFF;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.box__about-name{
+    font-size: 16px;
+}
+        
+        .newcard__button{
+            width: 250px;
+            height: 50px;
+            font-size: 24px;
         }
-        .info__subtitle {
-            font-family: Inter;
-            color: #FFF;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+        
+        .footer__left{
+            min-width: 250px;
+        }
+        .box__cards-name{
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 420px) {
+        .footer__left__block {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .support__block{
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .newcard__button{
+            font-size: 20px;
+            width: 200px;
         }
         
-        
-        
-        
-        }
-
-        @media (max-width: 420px) {
-            
             .info__title {
                 color: #FFF;
                 font-size: 45px;
@@ -954,6 +1097,12 @@ margin: 10px auto;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+            }
+            .preference__box-info{
+                font-size: 14px
+            }
+            .preference__block{
+                padding: 15px;
             }
         }
 
