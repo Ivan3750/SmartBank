@@ -21,7 +21,7 @@ Screen()
 
 
 
-const cardsBtn = document.querySelector('.cards');
+/* const cardsBtn = document.querySelector('.cards');
 const modalCard = document.querySelector('.modal__cards');
 const modalClose = document.querySelector('.modal-btn');
 const body = document.querySelector('.body');
@@ -41,4 +41,4 @@ modalClose.addEventListener("click", function(event){
     body.style.overflow = "visible"
 
 
-})
+}) */
