@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Оформлення карти</title>
+    <link rel="shortcut icon" href="../image/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/card.css">
     <link rel="stylesheet" href="../style/CardModal.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
@@ -42,42 +43,114 @@
                 </div>
                 
                 <form class="create__card-form" >
-                    <div class="create-form-Fullname">
-                        <input type="text" name="" id="" class="create-form-name" placeholder="Ім'я">
-                        <input type="text" name="" id="" class="create-form-surname"  placeholder="Прізвище">
-                    </div>
-                    <div class="create-form-box-card">
-                        <div class="mini-card-box">
-                            <div class="mini-card --black">
-                                <div class="mini-card-chip"></div>
-                                <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
-                            </div>
-                            <input type="radio" name="" id="" class="radio-black">
+                    <div class="create__card-first">
+                        <div class="create-form-Fullname">
+                            <input type="text" name="" id="" class="create-form-name" placeholder="Ім'я">
+                            <input type="text" name="" id="" class="create-form-surname"  placeholder="Прізвище">
                         </div>
-                        <div class="mini-card-box">
-                            <div class="mini-card --pink">
-                                <div class="mini-card-chip "></div>
-                                <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                        <div class="create-form-box-card">
+                            <div class="mini-card-box">
+                                <label for="black">
+                                    <div class="mini-card --black">
+                                        <div class="mini-card-chip"></div>
+                                        <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                                    </div>
+                                </label>
+                                <input type="radio" name="" id="black" class="radio-black">
                             </div>
-                            <input type="radio" name="" id="" class="radio-pink">
-                        </div>
-                        <div class="mini-card-box">
-                            <div class="mini-card --white">
-                                <div class="mini-card-chip "></div>
-                                <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                            <div class="mini-card-box">
+                                    <label for="pink">
+                                    <div class="mini-card --pink">
+                                        <div class="mini-card-chip "></div>
+                                        <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                                    </div>
+                                    </label>
+                                    <input type="radio" name="" id="pink" class="radio-pink">
                             </div>
-                            <input type="radio" name="" id="" class="radio-white">
+                            <div class="mini-card-box">
+                                <label for="white">
+                                <div class="mini-card --white">
+                                    <div class="mini-card-chip "></div>
+                                    <img src="../image/icons8-nfc-tag-100.png" alt="" class="mini-card-img">
+                                </div>
+                                </label>
+                                <input type="radio" name="" id="white" class="radio-white">
+                            </div>
                         </div>
-                    </div>
                         <div class="create-form-box-valuta">
                             <p class="USD Valuta">USD</p>
                             <p class="UAH Valuta">UAH</p>
                             <p class="EUR Valuta">EUR</p>
                         </div>
+                        <div class="create-form-container-company">
+                            <div class="box-company">
+                                <img src="../image/Mastercard Logo.png" alt="" class="box-company-img">
+                            </div>
+                            <div class="box-company"  value ="VISA">
+                                <img src="../image/VISA-logo.png" alt="" class="box-company-img">
+                            </div>
+                            <div class="box-company">
+                                <p class="box-company-text">bitcoin</p>
+                            </div>
+                        </div>
+                        <button class="create-form-btn-continue">Продовжити</button>
+                    </div>
+                    <div class="create__card-second">
+                        <div class="create__card-second-top">
+                            <p class="back">Назад</p>
+                            <p class="skip">Пропустити</p>
+                        </div>
+                        <div class="create-form-design">
+                            <div class="change-color">
+                                <p class="change-color-txt">Обрати колір</p>
+                            </div>
+                            <div class="change-img">
+                                <p class="change-img-txt">Обрати фон</p>
+                            </div>
+                        </div>
+                        <div class="change-info-box">
+                            <div class="change-color-container">
+                                <p class="change-color-title">Популярні кольори:</p>
+                                <div class="change-colors-box">
+                                    <div class="color-choose"></div>
+                                    <div class="color-choose"></div>
+                                    <div class="color-choose"></div>
+                                    <div class="color-choose"></div>
+                                </div>
+                                <p class="change-mycolor-title">Обрати свій колір:</p>
+                                <div class="change-color-my">
+                                    <input type="color" name="" id="" class="input-color" >
+                                </div>
+                            </div>
+                            <div class="change-image-container">
+                                <p class="change-color-title">Наші зображення:</p>
+                                <div class="change-colors-box">
+                                    <div class="card--background">
+                                        <img src="../image/background-card-1.png" alt="" class="background-img">
+                                    </div>
+                                    <div class="card--background">
+                                        <img src="../image/background-card-2.png" alt="" class="background-img">
+                                        
+                                    </div>
+                                    <div class="card--background">
+                                        <img src="../image/background-card-3.png" alt="" class="background-img">
+                                        
+                                    </div>
+                                    <div class="card--background">
+                                        <img src="../image/background-card-4.jpg" alt="" class="background-img" style="width: 100%; border-radius: 5px;">
+
+                                    </div>
+                                </div>
+                                <p class="change-mycolor-title">Завантажити своє зображення:</p>
+                                <div class="change-color-my">
+                                    <input type="file" name="" id="" class="input-img" >
+                                </div>
+                            </div>
+                        </div>
                         <button class="create-form-btn">Оформити карту</button>
-                        <p class="info-btn">Натискаючи на оформити карту ви погоджуєтеся з нашими користувацькими правилами</p>
-                    
+                    </div>
                 </form>
+
             </div>
             <div class="feture__card">
                 <h2 class="feture__card__title">Ваша майбутня карта </h2>

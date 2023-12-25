@@ -34,6 +34,12 @@
    }
 
 
+body{
+    height: 100vh;
+    background-color: #000;
+}
+
+
 /* HEADER */
 
 .header{
@@ -82,7 +88,6 @@
 .main{
     background-color: #000;
     color: #fff;
-    height: 700px;
 }
 .section__regestation {
     position: relative;

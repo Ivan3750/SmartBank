@@ -181,7 +181,7 @@ line-height: normal;
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f100;
+    background: #000000;
   }
   
   /* Handle */
