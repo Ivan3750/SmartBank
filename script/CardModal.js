@@ -6,11 +6,11 @@ const modalClose = document.querySelector('.modal-btn');
 const body = document.querySelector('.body');
 
 cardsBtn.addEventListener("click", function(event){
+    console.log("Work")
     event.preventDefault()
     body.style.overflow = "hidden"
     mobileList.classList.remove("show")
     modalCard.classList.add("show")
-    console.log("This")
     
 })
 
@@ -22,5 +22,16 @@ modalClose.addEventListener("click", function(event){
     modalCard.classList.remove("show")
     body.style.overflow = "visible"
 
+
+})
+
+const openBtn = document.querySelector('.img-menu');
+const closeBtn = document.querySelector('.close-btn');
+
+openBtn.addEventListener("click", function(){
+    mobileList.classList.add("show")
+})
+closeBtn.addEventListener("click", function(){
+    mobileList.classList.remove("show")
 
 })

@@ -61,7 +61,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 350px;
+    width: 100%;
     
 }
 .element{
@@ -92,7 +92,7 @@ body{
 .section__regestation {
     position: relative;
     display: flex;
-    padding: 0px 60px;
+    padding: 20px 60px;
     justify-content: space-evenly;
 }
 .regestration__text-box {
@@ -111,7 +111,9 @@ body{
 
 }
 .regestration {
-    width: 500px;
+    width: 100%;
+    max-width: 450px;
+    min-width: 250px;
     height: 500px;
     border-radius: 60px;
     background: linear-gradient(19deg, #0095FF -34.68%, #10069F 114.19%);    
@@ -124,7 +126,7 @@ body{
 }
 .regestation__username {
     border-radius: 20px;
-    width: 350px;
+    width: 100%;
     height: 50px;
     font-size: 20px;
     padding-left: 10px ;
@@ -132,27 +134,27 @@ body{
 .regestation__email {
     padding-left: 10px ;
     border-radius: 20px;
-    width: 350px;
+    width: 100%;
     height: 50px;
     font-size: 20px;
 }
 .regestation__password {
     padding-left: 10px ;
     border-radius: 20px;
-    width: 350px;
+    width: 100%;
     height: 50px;
     font-size: 20px;
 }
 .regestation__tel {
     padding-left: 10px ;
     border-radius: 20px;
-    width: 350px;
+    width: 100%;
     height: 50px;
     font-size: 20px;
 }
 .regestration__button {
     border-radius: 20px;
-    width: 350px;
+    width: 100%;
     height: 50px;
     font-size: 20px;
     border-radius: 20px;
@@ -192,7 +194,7 @@ background: #FFD700;
 }
 
 .monaywings {
-    top: 200px;
+    top: 100px;
     left: 100px;
     rotate: 20deg;
 
@@ -200,16 +202,16 @@ background: #FFD700;
 .moneybag {
     height: 70px;
     width: 70px;
-    top: 250px;
-    left: 600px;
+    top: 300px;
+    left: 95%;
     rotate: 20deg;
 }
 .sunglasses {
     top: 500px;
     left: 100px;
     rotate: 10deg;
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
 }
 
 
@@ -248,7 +250,7 @@ background: #FFD700;
 /* MODAL */
 
 
-.modal{
+.modal-message{
     width: 300px;
     height: 70px;
     background: linear-gradient(262deg, #FFD700 -27.23%, rgba(255, 180, 0, 0.81) 120.21%);
@@ -261,7 +263,7 @@ background: #FFD700;
     gap: 10px;
     transition: 0.5s;
 }
-.modal.show{
+.modal-message.show{
     right: 20px;
 }
 
@@ -275,7 +277,9 @@ background: #FFD700;
 
 
 
-
+.regestation input{
+    width: 100%;
+}
 
 /* Стилі для великих екранів (дисплей максимум 1199рх) */
 @media (max-width: 1199px) {
@@ -303,7 +307,24 @@ background: #FFD700;
         ¨.efect{
             top: 700px;
         }
-
+        .title{
+            margin: 0px;
+            width: 550px;
+        }
+        .section__regestation{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .moneybag {
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            top: 270px;
+            left: 84%;
+            rotate: 20deg;
+            
+        }
      }
 
      @media (max-width: 920px) {
@@ -342,6 +363,10 @@ background: #FFD700;
 
 /* Стилі для малих екранів (дисплей максимум 767рх) */
     @media (max-width: 767px) { 
+        .regestration{
+            width: 300px;
+        }
+       
         .img-menu{
             display: block;
             width: 50px;
@@ -358,6 +383,12 @@ background: #FFD700;
             display: none;
 
         }
+        .emoji-img{
+            left: 20px;
+            width: 50px;
+            display: none;
+            height: 50px;
+        }
         
         
         
@@ -366,6 +397,12 @@ background: #FFD700;
     
     /* Стилі для дуже малих екранів (дисплей максимум 575рх) */
     @media (max-width: 575px) {
+        .emoji-img{
+            display: none;
+        }
+        .section__regestation{
+            padding: 20px 30px;
+        }
    
         .info__title {
             color: #FFF;
@@ -407,7 +444,7 @@ background: #FFD700;
                 font-weight: 400;
                 line-height: normal;
             }
-            input{
+           /*  input{
                 width: 275px!important;
             }
 
@@ -417,20 +454,7 @@ background: #FFD700;
             
             .regestation{
                 height: 450px;
-            }
+            } */
 
         }
-        @media (max-width: 375px) {
-            input{
-                width: 200px!important;
-            }
-
-            .regestration__button{
-                width: 200px!important;
-            }
-           
-            .regestation{
-                height: 370px;
-            }
-
-        }
+        

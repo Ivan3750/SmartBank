@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регестрація</title>
-    <link rel="shortcut icon" href="../image/favicon.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="../style/regestration.css">
+    <link rel="stylesheet" href="../style/support.css">
     <link rel="stylesheet" href="../style/CardModal.css">
     <link rel="stylesheet" href="../style/multi.css">
     <link rel="stylesheet" href="../style/load.css">
-    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
-    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../image/favicon.png" type="image/x-icon">
+    <title>Підтримка</title>
 </head>
-<body>
+<body class="body">
     <div class="modal__cards">
         <div class="modal">
             <img src="../image/close-100.png" alt="" class="modal-btn">
@@ -109,36 +106,60 @@
         </div>
         <img src="../image/icons8-menu-100.png" alt="Menu" class="img-menu">
     </header>
-    <main class="main">
-        <section class="section__regestation"> 
-            <div class="regestration__text-box">
-                <h2 class="title">Бажаєте стати клієнтом ? </h2>
+
+    <main>
+        <section class="info__box">
+            <div class="info__box-left">
+                <h1 class="info__box-title">SmartBank підтримка <br>
+                    допоможе кожному</h1>
             </div>
-            <form class="regestration">
-                <img src="../image/account.png" class="regestation__image">
-                <input type="text" name="username" placeholder="Username" class="regestation__username">
-                <input type="email" name="email" placeholder="Email" class="regestation__email">
-                <input type="password" name="password" placeholder="Password" class="regestation__password">
-                <input type="tel" name="tel" class="regestation__tel" placeholder="+380">
-            
-                 <button class="regestration__button" type="submit">Зарегеструватися</button>
-                
-                
-                 <a href="../pages/card.html" style="width: 50px;">Skip</a>
-            </form>
+            <div class="info__box-right">
+                <img src="../image/support-img.png" alt="" class="info__box-img">
+            </div>
         </section>
-        <img src="../image/money_with_wings.png" alt="" class="emoji-img monaywings">
-        <img src="../image/moneybag.png" alt="" class="emoji-img moneybag">
-        <img src="../image/sunglasses.png" alt="" class="emoji-img sunglasses">
-        <div class="modal-message">
-            <img src="" alt="" class="modal-img">
-            <p class="problem">No problem</p>
-        </div>
+        <section class="support__block">
+            <div class="support__application">
+                <form class="support-form">
+                    <p class="support-form-title">Надіслати заявку</p>
+                    <div class="FullName">
+                        <input type="text" class="form-name" placeholder="Ім'я">
+                        <input type="text" class="form-surname" placeholder="Прізвище">
+                    </div>
+                    <input type="tel" class="form-tel" placeholder="+380">
+                    <input type="text" class="form-title" placeholder="Тема">
+                    <textarea class="form-text" placeholder="Ведіть вашу проблему"></textarea>
+                    <button type="submit" class="btn-sumbit"> Надіслати</button>
+                </form>
+            </div>
+            <div class="support__info-1">
+                <div class="support-box">
+                    <p class="support-box-info">24/7</p>
+                </div>
+                <div class="support-box">
+                    <p class="support-box-info">Спілкування <br> тільки з <br> живими <br> людьми <br></p>
+                </div>
+            </div>
+            <div class="support__info-2">
+                <div class="support-box">
+                    <p class="support-box-info">Інші варіанти</p>
+                </div>
+                <div class="support-box social">
+                    <div class="support-circle">
+                        <img src="../image/telegram-100.png" alt="" class="support-circle-img">
+                    </div>
+                    <div class="support-circle">
+                        <img src="../image/viber-100.png" alt="" class="support-circle-img">
+                    </div>
+                    <div class="support-circle">
+                        <img src="../image/facebook-100.png" alt="" class="support-circle-img">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-        <script src="../script/regestration.js"></script>
- <script src="../script/multi.js"></script>
+    <script src="../script/multi.js"></script>
     <script src="../script/load.js"></script>
     <script src="../script/support.js"></script>
     <script src="../script/CardModal.js"></script>
-    </body>
+</body>
 </html>

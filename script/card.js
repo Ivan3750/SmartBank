@@ -72,17 +72,23 @@ CreateBtn.addEventListener("click", function(event){
     
 })
 
+
+function changeColorCard(newcolor){
+    cardNumber.style.color = newcolor
+    cardFullname.style.color = newcolor
+    cardFullnameTxt.style.color = newcolor
+    cardExpires.style.color = newcolor
+    cardExpiresTxt.style.color = newcolor
+    CVV.style.color = newcolor
+}
+
+
 radioBlack.addEventListener("click", function(){
     if (radioBlack.checked) {
         radioPink.checked = false
         radioWhite.checked = false
         cardNew.style.backgroundColor = "black"
-        cardNumber.style.color = "white"
-        cardFullname.style.color = "white"
-        cardFullnameTxt.style.color = "white"
-        cardExpires.style.color = "white"
-        cardExpiresTxt.style.color = "white"
-        CVV.style.color = "white"
+        changeColorCard("white")
     } else {
         
     }
@@ -92,12 +98,7 @@ radioPink.addEventListener("click", function(){
         radioBlack.checked = false
         radioWhite.checked = false
         cardNew.style.backgroundColor = "#E1447D"
-        cardNumber.style.color = "white"
-        cardFullname.style.color = "white"
-        cardFullnameTxt.style.color = "white"
-        cardExpires.style.color = "white"
-        cardExpiresTxt.style.color = "white"
-        CVV.style.color = "white"
+        changeColorCard("white")
     } else {
         
     }
@@ -108,13 +109,7 @@ radioWhite.addEventListener("click", function(){
         radioBlack.checked = false
         radioPink.checked = false
         cardNew.style.backgroundColor = "white"
-        cardNumber.style.color = "black"
-        cardFullname.style.color = "black"
-        cardFullnameTxt.style.color = "black"
-        cardExpires.style.color = "black"
-        cardExpiresTxt.style.color = "black"
-        CVV.style.color = "black"
-    } else {
+        changeColorCard("black")
         
     }
 })
@@ -167,39 +162,19 @@ colorChoose.forEach((color, index) => {
         switch (index) {
             case 0:
                 cardNew.style.backgroundColor = "black"
-                cardNumber.style.color = "white"
-                cardFullname.style.color = "white"
-                cardFullnameTxt.style.color = "white"
-                cardExpires.style.color = "white"
-                cardExpiresTxt.style.color = "white"
-                CVV.style.color = "white"
+                changeColorCard("white")
                 break;
             case 1:
                 cardNew.style.backgroundColor = "white"
-                cardNumber.style.color = "black"
-                cardFullname.style.color = "black"
-                cardFullnameTxt.style.color = "black"
-                cardExpires.style.color = "black"
-                cardExpiresTxt.style.color = "black"
-                CVV.style.color = "black"
+                changeColorCard("black")
                 break;
             case 2:
                 cardNew.style.backgroundColor = "#E1447D"
-                cardNumber.style.color = "white"
-                cardFullname.style.color = "white"
-                cardFullnameTxt.style.color = "white"
-                cardExpires.style.color = "white"
-                cardExpiresTxt.style.color = "white"
-                CVV.style.color = "white"
+                changeColorCard("white")
                 break;
             case 3:
                 cardNew.style.backgroundColor = "#0095FF"
-                cardNumber.style.color = "white"
-                cardFullname.style.color = "white"
-                cardFullnameTxt.style.color = "white"
-                cardExpires.style.color = "white"
-                cardExpiresTxt.style.color = "white"
-                CVV.style.color = "white"
+                changeColorCard("white")
                 break;
         }
     });
@@ -214,18 +189,23 @@ imgChoose.forEach((img, index) => {
             case 0:
                 cardNew.classList.add("img")
                 cardNew.style.background = "url('../image/background-card-1.png')";
+                changeColorCard("white")
+                
                 break;
             case 1:
                     cardNew.classList.add("img")
                     cardNew.style.background = "url('../image/background-card-2.png')";
+                    changeColorCard("white")
                     break;
             case 2:
                 cardNew.classList.add("img")
                 cardNew.style.background = "url('../image/background-card-3.png')";
+                changeColorCard("white")
                 break;
             case 3:
                 cardNew.classList.add("img")
                 cardNew.style.background = "url('../image/background-card-4.jpg')";
+                changeColorCard("white")
                 break;
         }
     });

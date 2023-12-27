@@ -68,44 +68,68 @@ function NumberWithSpaces(number) {
 
 CheckUserDashboard()
 CheckpurchasesDashboard()
- CheckCashbackDashboard()
- CheckspentDashboard()
-
-function CheckTime(coefficient, dashboard, dashboardNum, datoTime){ 
+CheckCashbackDashboard()
+CheckspentDashboard()
+ 
+ 
+ function CheckTime(coefficient, dashboard, datoTime, index){ 
+    const dashboardBoxInfo = document.querySelectorAll('.dashboard__box-info');
     todayDato = new Date(); 
     infoDato = Math.floor((todayDato - firstDato)/datoTime) 
     onlineNumber = Math.floor((infoDato / coefficient)) 
-    visInfo = dashboard + onlineNumber 
+    visInfo = dashboard + onlineNumber
+    if ((visInfo.toString()).length < 9 && (visInfo.toString()).length > 6) {
+        numTxT = " млн"
+    } else if ((visInfo.toString()).length < 12 && (visInfo.toString()).length > 9) {
+        numTxT = " млрд"
+        
+    } else if ((visInfo.toString()).length < 15 && (visInfo.toString()).length > 12) {
+        numTxT = " трн"
+    
+    
 
-    dashboardNum.innerHTML = NumberWithSpaces(visInfo )
+    }else {
+        numTxT = "-"
+        
+    }
+    dashboardBoxInfo[index].innerHTML = (visInfo.toString()).charAt(0) + "," + (visInfo.toString()).charAt(1) + numTxT
+    dashboardNumber[index].innerHTML = NumberWithSpaces(visInfo )
     return onlineNumber;
-
 
 }
 
     
 function CheckUserDashboard(){
-    CheckTime(500, usersDashboard, dashboardNumber[0], 1000)
+    CheckTime(500, usersDashboard, 1000, 0)
     setTimeout(CheckUserDashboard, 1000)
 
 
 
 }
 function CheckpurchasesDashboard(){
-    CheckTime(1, purchasesDashboard, dashboardNumber[1], 1)
+    CheckTime(1, purchasesDashboard, 1, 1)
     setTimeout(CheckpurchasesDashboard,0.0001)  
     
 }
 function CheckspentDashboard(){
-    CheckTime(0.1, spentDashboard, dashboardNumber[2], 1)
+    CheckTime(0.1, spentDashboard, 1, 2 ) 
     setTimeout(CheckspentDashboard,0.0001)  
     
 }
 function CheckCashbackDashboard(){
-    CheckTime(1, cashbackDashboard, dashboardNumber[3], 10)
+    CheckTime(1, cashbackDashboard, 10, 3)
     setTimeout(CheckCashbackDashboard,0.0001)  
 
 }
+
+
+
+
+
+
+
+
+
 
 /* function CheckUserDashboard(){
     let infoDato = Math.floor((todayDato - firstDato)/1000) 

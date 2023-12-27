@@ -3,7 +3,7 @@ const userName = document.querySelector('.regestation__username');
 const email = document.querySelector('.regestation__email');
 const password = document.querySelector('.regestation__password');
 const tel = document.querySelector('.regestation__tel');
-const modalError = document.querySelector('.modal');
+const modalError = document.querySelector('.modal-message');
 const problemText = document.querySelector('.problem');
 const modalImage = document.querySelector('.modal-img');
 
