@@ -1,0 +1,882 @@
+* {
+    color: #fff;
+}
+
+body {
+    background-color: black;
+    display: flex;
+}
+
+
+main{
+    margin-left: 140px;
+}
+
+.header {
+    width: 100px;
+    height: calc(100vh - 70px);
+    flex-shrink: 0;
+    background: #141414;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: start;
+    align-items: center;
+    padding: 70px 20px 0px 20px;
+    position: absolute;
+    gap: 75px 
+
+}
+
+.logo-header {
+    width: 50px;
+    height: auto;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-element {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.section__home {
+    display: none;
+    width: calc(100vw - 220px);
+    padding: 0px 40px;
+}
+
+.section__cards {
+    display: none;
+/*     width: calc(100vw - 200px);
+ */    padding: 20px 0px 0px 60px;
+    gap: 20px;
+}
+
+.section__deposit {
+    display: none;
+    width: calc(100vw - 140px);
+}
+
+.section__cashback {
+    display: none;
+    width: calc(100vw - 140px);
+}
+
+.section__settings {
+    display: none;
+    width: calc(100vw - 140px);
+}
+
+
+
+.section__home.active {
+    display: block;
+}
+
+.section__cards.active {
+    display: flex;
+}
+
+.section__deposit.active {
+    display: block;
+}
+
+.section__cashback.active {
+    display: block;
+}
+
+.section__settings.active {
+    display: flex;
+    width: calc(100vw - 260px);
+    padding: 20px 40px;
+    gap: 25px;
+    height: calc(100% - 40px);
+}
+
+
+.menu-element {
+    cursor: pointer;
+}
+
+
+
+.my__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    border-radius: 40px;
+    background: #141414;
+    padding: 25px;
+    width: 80vw;
+    margin: 10px auto;
+
+}
+
+
+.my-card.card-black {
+    margin: 0;
+}
+
+.my__card-number {
+    text-align: center;
+}
+
+.my-card {
+    margin-top: 50px;
+    transition: 0.5s;
+    width: 250px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 30px;
+    padding: 10px;
+
+}
+
+
+.my-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.my-card-type {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+.my__card-company {
+    width: 50px;
+}
+
+.my__card-number {
+    margin-top: 20px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 5px;
+}
+
+.my__card-data {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.add__card {
+    width: 250px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.add__card:hover {
+    cursor: pointer;
+}
+
+
+.home__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 40px;
+    width: calc( 80vw + 40px);
+    margin: 0px auto;
+    margin-top: 20px;
+
+}
+
+.home__bottom__left {
+
+}
+
+.home__bottom__right {
+}
+
+
+
+
+
+
+
+.home__bottom {}
+
+.home__bottom__left {}
+
+.tel-box {
+    padding: 50px 30px;
+    width: 539px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #141414;
+}
+
+.tel-box-title {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.tel-box-input {
+    margin-top: 30px;
+    display: flex;
+    background: #222;
+    width: 450px;
+    height: 51px;
+    border-radius: 30px;
+    justify-content: space-between;
+}
+
+.tel-input {
+    border-radius: 30px;
+    background: #222;
+    width: 300px;
+    height: 51px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    padding-left: 20px;
+    line-height: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+.tel-pay {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 30px;
+    background: linear-gradient(247deg, #0095FF -10.05%, #10069F 113.72%);
+    width: 130px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.exchange-rate-box {
+    margin-top: 40px;
+display: flex;
+justify-content: space-between;
+    
+
+}
+
+.valuta__container {
+/*     width: 195px;
+height: 187px; */
+border-radius: 50px;
+background: #141414;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.valuta {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    text-align: center;
+    margin: 0px auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.kurs {
+    margin: 20px 0px;
+}
+
+.home__bottom__right {
+
+}
+
+.my__transactions {
+
+    width: 504px;
+    height: 354px;
+    border-radius: 50px;
+background: #141414;
+padding: 40px 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 10px;
+
+}
+
+
+
+.transaction-info{
+    display: flex;
+    gap: 20px;
+}
+
+.transaction__box {
+    display: flex;
+height: 58px;
+border-radius: 40px;
+justify-content: space-between;
+align-items: center;
+padding: 0px 20px;
+background: #222;
+
+}
+
+.icon-transaction {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.name-transation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name-transation-title {
+
+    color: #FFF;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.name-transation-category {
+
+    color: rgba(255, 255, 255, 0.60);
+font-family: Lato;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.transaction-number {
+    color: #FF4242;
+font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
+.my__transactions-title{
+    color: #474747;
+font-family: Lato;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 20px;
+}
+
+
+
+
+
+
+.cards__my__cards{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 40px;
+    background: #141414;
+    padding: 25px;
+    width: 270px;
+    
+}
+
+
+.cards__function {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+/*     width: 80vw;
+ *//*     align-items: center;
+ */
+ margin-left: 50px;
+}
+.function__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.cards__status {
+    border-radius: 29px;
+background: linear-gradient(231deg, #FFD700 5.62%, #FF740F 122.33%);
+padding: 40px 85px 40px 35px;
+}
+.cards__status-type {
+
+    color: #FFF;
+font-family: Lato;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.cards__status-balance {
+    margin: 20px 0px;
+    color: #FFF;
+text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+font-family: Lato;font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.8px;
+
+}
+.cards__status-credit {
+
+    color: #FFF;
+font-family: Lato;font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.function__bottom {
+    display: flex;
+    gap: 20px;
+}
+
+
+.cards__settings {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cards__setting-text {
+    padding: 20px 70px;
+    border-radius: 29px;
+    color: #FFF;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+
+
+}
+
+
+.cards__setting-text:nth-child(1){
+    border-radius: 29px;
+background: linear-gradient(95deg, #0095FF 5.33%, #10069F 105.32%);
+}
+
+.cards__setting-text:nth-child(2){
+    border-radius: 29px;
+    background: linear-gradient(266deg, #FF4242 8.67%, #E1447D 94.76%);
+}
+
+.cards__setting-text:nth-child(3){
+    border-radius: 29px;
+    background: linear-gradient(265deg, rgba(18, 170, 79, 0.50) -10.38%, rgba(75, 209, 129, 0.71) 86.7%);
+    
+}
+
+
+
+
+.transaction-list{
+    width: 500px;
+    height: calc(100% - 60px);
+    padding: 20px;
+    border-radius: 50px;
+background: #141414;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.more__box {
+    width: 100%;
+}
+.more-img {
+    display: block;
+    margin: 0px auto;
+}
+
+
+
+
+
+
+.cards__money__function {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.deposit-box {
+    padding: 30px 60px;
+    border-radius: 50px;
+    background: linear-gradient(237deg, #4BD181 1.09%, rgba(0, 255, 224, 0.53) 105.25%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.depost-box-img {
+    width: 50px;
+    height: 50px;
+}
+.deposit-box-name {
+}
+.cashback-box {
+    padding: 30px 60px;
+    border-radius: 50px;
+    background: linear-gradient(236deg, #FF740F -12.2%, #E1447D 137.38%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.cashback-box-img {
+    width: 50px;
+    height: 50px;
+}
+.cashback-box-name {
+}
+.credit-box {
+    padding: 30px 60px;
+    border-radius: 50px;
+    background: linear-gradient(238deg, #FF0505 -9.37%, #E1447D 127.92%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.credit-box-img {
+    width: 50px;
+    height: 50px;
+}
+.credit-box-name {
+}
+
+/* 
+.section__settings {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #cb0a0a;
+
+    
+} */
+.settings__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.name__block {
+    flex-shrink: 0;
+    border-radius: 27px;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    padding: 30px 50px;
+    gap: 10px;
+}
+.name__block-img {
+    width: 100px;
+    height: 100px;
+}
+
+.name__block-txt {
+    color: #FFF;
+font-family: Lato;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.tel__block {
+    display: flex;
+    border-radius: 20px;
+background: #141414;
+padding: 30px 20px 30px 50px ;
+align-items: center;
+justify-content: space-between;
+}
+.tel__block-number {
+    color: rgba(145, 145, 145, 0.23);
+    font-family: Lato;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.tel__block-btn{
+    border-radius: 12px;
+    padding: 5px;
+    background: linear-gradient(230deg, #FF740F -24.32%, #FF4242 119.81%);
+}
+.tel__block-img {
+    width: 50px;
+    height: 50px;
+}
+.email__block {
+    justify-content: space-between;
+    display: flex;
+    border-radius: 20px;
+background: #141414;
+padding: 30px 20px 30px 50px ;
+align-items: center;
+}
+.email__block-btn{
+    padding: 5px;
+    border-radius: 12px;
+background: linear-gradient(230deg, #FF740F -24.32%, #FF4242 119.81%);
+}
+
+
+
+
+
+.email__block-number {
+    color: rgba(145, 145, 145, 0.23);
+font-family: Lato;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.email__block-img {
+
+    width: 50px;
+    height: 50px;
+}
+
+
+.password__block {
+    border-radius: 20px;
+background: #141414;
+padding: 25px;
+}
+.password__block-title {
+    color: rgba(255, 255, 255, 0.50);
+font-family: Lato;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 20px 20px 70px 20px;
+}
+.password__block-txt {
+    color: #FFF;
+font-family: Lato;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.password__block-line{
+    display: flex;
+    justify-content: space-between;
+}
+.password__block-btn {
+    padding: 15px 40px;
+    border-radius: 20px;
+background: linear-gradient(259deg, #BD00FF -19.3%, #E1447D 104.11%);
+color: #FFF;
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.settings__right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+.theme-box {
+    border-radius: 20px;
+    background: #141414;
+    padding: 40px;
+    color: #FFF;
+font-family: Lato;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+position: relative;
+}
+.theme-choose-line {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 30px;
+background: #262626;
+position: relative;
+padding: 20px 0px;
+}
+
+.theme-choose-line::after{
+    border-radius: 30px;
+    background: rgba(25, 25, 25, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
+}
+
+.theme-light {
+}
+.theme-dark {
+}
+.language-box {
+    border-radius: 20px;
+    background: #141414;
+    padding: 40px;
+    color: #FFF;
+font-family: Lato;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.theme-ukrainian {
+}
+.theme-english {
+}
+.documents-box {
+    border-radius: 20px;
+    background: #141414;
+    padding: 50px;
+}
+.documents-box-title {
+
+
+
+
+
+    color: #FFF;
+    font-family: Lato;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+
+
+
+
+}
+.documents-function {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.upload-documents {
+    border-radius: 40px;
+background: #292929;
+padding: 40px 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 40%;
+}
+.uplpad-documents-info {
+    color: #494949;
+text-align: center;
+font-family: Lato;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+}
+
+
+.input-documents{
+    width: 115px;
+    
+}
+
+.diia-block {
+    border-radius: 40px;
+background: #292929;
+padding: 40px 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 40%;
+justify-content: center;
+}
+.diia-img {
+    width: 60px;
+    height: 60px;
+}
+.diia-info {
+    color: #494949;
+text-align: center;
+font-family: Lato;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}

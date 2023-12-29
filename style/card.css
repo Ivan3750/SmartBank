@@ -100,6 +100,7 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
+    height: 100vh;
     background: linear-gradient(180deg, rgba(16, 6, 159, 0.64) 6.3%, rgba(0, 149, 255, 0.64) 231.72%);}
 .feture__card__title {
     color: #FFF;

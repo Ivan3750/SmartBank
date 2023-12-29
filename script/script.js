@@ -1,6 +1,6 @@
-let mediaScreen = window.matchMedia("(max-width: 700px)")
+/* let mediaScreen = window.matchMedia("(max-width: 700px)")
 const logoMain = document.querySelector('.logo');
-/* STYLE */
+STYLE
 
 function Screen(){
     if (mediaScreen.matches) {
@@ -16,7 +16,7 @@ mediaScreen.addEventListener("change", function(){
     
     
 })
-Screen()
+Screen() */
 
 
 
