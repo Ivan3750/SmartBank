@@ -1,4 +1,5 @@
 *{ 
+    outline: 2px solid #fff;
     padding: 0; 
     margin: 0; 
     border: 0; 
@@ -31,14 +32,15 @@
     
    html{ 
     scroll-behavior: smooth; 
+ 
    }
-
+main{
+    overflow: hidden;
+}
 
 
    body{
-    height: 100vh;
     background-color: #000;
-    overflow: hidden;
 }
 
 
@@ -92,6 +94,7 @@
 .create__card {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 .form__card {
 }
@@ -100,7 +103,6 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    height: 100vh;
     background: linear-gradient(180deg, rgba(16, 6, 159, 0.64) 6.3%, rgba(0, 149, 255, 0.64) 231.72%);}
 .feture__card__title {
     color: #FFF;
@@ -720,3 +722,233 @@ background-color: #000;
 }
 
 
+@media (max-width: 1199.98px){
+    .card {
+        margin-top: 50px;
+        width: 350px;
+        height: 225px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        perspective: 1000px; 
+        transition: transform 0.5s ease;
+        z-index: 1;
+        background-color: #000;
+    }
+    
+    
+    .card.color{
+        background-image: none!important;
+        background-color: #000;
+    }
+    .card.img{
+        position: relative;
+        background-size: contain!important;
+        background-color: #000!important;
+        background-repeat: no-repeat!important;
+        background-position-x: center!important;
+    
+    }
+    
+    
+    
+    .card::before{
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+    /*     opacity: 0.7;
+     */    border-radius: 20px;
+        z-index: -1;
+    
+    }
+
+    
+    
+    
+    
+    
+    .card__top {
+        padding: 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+    .chip__card {
+        height: 40px;
+    }
+    .company__card {
+        height: 75px;
+    }
+    .card__middle {
+    }
+    .card__number {
+        color: #FFF;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 6.25px;
+    text-align: center;
+    }
+    .card__bottom {
+        color: #FFF;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    
+    margin-top: 50px;
+    }
+.black__line {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 60px;
+    background-color: #404040;
+}
+.white__line {
+    width: 100%;
+    height: 50px;   
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.CVV {
+    color: #fff;
+font-family: Work Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 6.25px;
+}
+
+.card__logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    height: 30px;
+    
+}
+.image-company{
+    height: 75px;
+    width: auto;
+}
+
+.card__bottom{
+    margin-top: 25px;
+}
+
+.card__fullname {
+    font-size: 14px;
+}
+.card__fullname-text {
+    font-size: 14px;
+}
+.card__fullname-info {
+    font-size: 14px;
+}
+.card__expires {
+    font-size: 14px;
+}
+.card__expires-text {
+    font-size: 14px;
+}
+.card__expires-number {
+    font-size: 14px;
+}
+
+.feture__card__title{
+    font-size: 40px;
+}
+
+.create-form-Fullname{
+    flex-direction: column;
+}
+
+.create-form-name{
+    width: 100%;
+}
+.create-form-surname{
+    width: 100%;
+}
+.create-form-Fullname {
+    padding: 0px;
+}
+.create__card-form{
+    width: 300px;
+    height: 450px;
+}
+.mini-card-box{
+    scale: 0.8;
+}
+
+.create-form-box-card{
+    padding: 20px 0px;
+}
+.box-company{
+    scale: 0.8;
+}
+.create-form-btn-continue{
+    scale: 0.8;
+}
+.back__box{
+    scale: 0.8;
+}
+
+
+}
+
+@media (max-width: 991.98px){
+    .create__card{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .create__card-form{
+        margin: 0;
+    }
+    .create-form-design{
+    justify-content: space-around;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    }
+    .create-form-btn{
+        margin-top: 50px;
+    }
+    
+    .form__card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .feture__card{
+        width: 100%;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 385.98px){
+    .card{
+        scale: 0.8;
+    }
+    .feture__card__title{
+        font-size: 30px;
+    }
+    .create__card-form{
+        scale: 0.8;
+    }
+}

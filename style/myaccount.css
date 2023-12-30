@@ -210,12 +210,13 @@ main{
 .home__bottom {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     border-radius: 40px;
     width: calc( 80vw + 40px);
     margin: 0px auto;
     margin-top: 20px;
-
+    padding: 0px 10px;
+    gap: 20px;
 }
 
 .home__bottom__left {
@@ -223,6 +224,7 @@ main{
 }
 
 .home__bottom__right {
+    width: 45%;
 }
 
 
@@ -237,7 +239,6 @@ main{
 
 .tel-box {
     padding: 50px 30px;
-    width: 539px;
     flex-shrink: 0;
     border-radius: 50px;
     background: #141414;
@@ -256,7 +257,6 @@ main{
     margin-top: 30px;
     display: flex;
     background: #222;
-    width: 450px;
     height: 51px;
     border-radius: 30px;
     justify-content: space-between;
@@ -265,7 +265,6 @@ main{
 .tel-input {
     border-radius: 30px;
     background: #222;
-    width: 300px;
     height: 51px;
     flex-shrink: 0;
     color: #FFF;
@@ -294,15 +293,17 @@ input::-webkit-inner-spin-button {
     line-height: normal;
     border-radius: 30px;
     background: linear-gradient(247deg, #0095FF -10.05%, #10069F 113.72%);
-    width: 130px;
-    height: 50px;
+/*     width: 130px;
+ */    height: 50px;
     flex-shrink: 0;
+    padding: 5px;
 }
 
 .exchange-rate-box {
     margin-top: 40px;
 display: flex;
 justify-content: space-between;
+gap: 10px;
     
 
 }
@@ -340,16 +341,16 @@ align-items: center;
 }
 
 .my__transactions {
-
-    width: 504px;
-    height: 354px;
-    border-radius: 50px;
+/* width: clamp(300px,50%,475px);
+ */border-radius: 50px;
 background: #141414;
-padding: 40px 50px;
+padding: 40px 5%;
 display: flex;
 flex-direction: column;
 justify-content: center;
+align-items: center;
 gap: 10px;
+min-width: 380px;
 
 }
 
@@ -368,7 +369,7 @@ justify-content: space-between;
 align-items: center;
 padding: 0px 20px;
 background: #222;
-
+gap: 25px;
 }
 
 .icon-transaction {
@@ -880,3 +881,155 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.transaction__box{
+    width: clamp(285px,80%,600px);
+}
+
+@media (min-width: 1200px){
+    .my__transaction{
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 1199.98px){
+    Rules
+    .transaction__box{
+        width: 100%;
+    }
+    .my__transaction{
+        min-width: 300px;
+    }
+    .home__bottom{
+    flex-wrap: wrap;  
+
+}
+}
+
+@media (max-width: 991.98px){
+    
+}
+
+@media (max-width: 767.98px){
+    
+}
+
+
+
+@media (max-width: 575.98px){
+    
+}
+
