@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style/load.css">
     <link rel="stylesheet" href="../style/myaccount.css">
 </head>
-<body>
+<body class="body"> 
     <div class="mask">
         <div class="load">
             <img src="../image/logo.png" alt="" width="200px">
@@ -73,6 +73,10 @@
                         </div>
                     </div>
                     <div class="exchange-rate-box">
+                        <div class="valuta__container">
+                            <p class="valuta">$</p>
+                            <p class="kurs">24/08 - 24/09</p>
+                        </div>
                         <div class="valuta__container">
                             <p class="valuta">$</p>
                             <p class="kurs">24/08 - 24/09</p>
@@ -263,7 +267,7 @@
                 </div>
                 <div class="tel__block">
                     <p class="tel__block-number">+380 67 232 64 87</p>
-                    <a href="" class="tel__block-btn"><img src="../image/pencil.png" alt="" class="tel__block-img"></a>
+                    <a href="" class="tel__block-btn" onclick="enableEdit()"><img src="../image/pencil.png" alt="" class="tel__block-img"></a>
                 </div>
                 <div class="email__block">
                     <p class="email__block-number">SmartBank@gmail.com</p>
@@ -283,14 +287,16 @@
             <div class="settings__right">
                 <div class="theme-box">
                     <div class="theme-choose-line">
+                        <div class="theme-choose"></div>
                         <p class="theme-light">Світла тема</p>
                         <p class="theme-dark">Чорна тема</p>
                     </div>
                 </div>
                 <div class="language-box">
-                    <div class="theme-choose-line">
-                        <p class="theme-ukrainian">Українська</p>
-                        <p class="theme-english">Англійська</p>
+                    <div class="language-choose-line">
+                        <div class="language-choose"></div>
+                        <p class="language-ukrainian">Українська</p>
+                        <p class="language-english">Англійська</p>
                     </div>
 
                 </div>

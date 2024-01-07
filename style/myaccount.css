@@ -1,9 +1,10 @@
+
 * {
     color: #fff;
 }
 
 body {
-    background-color: black;
+    background-color: #1E1E1E;
     display: flex;
 }
 
@@ -14,7 +15,7 @@ main{
 
 .header {
     width: 100px;
-    height: calc(100vh - 70px);
+    height: 100%;
     flex-shrink: 0;
     background: #141414;
     display: flex;
@@ -206,20 +207,22 @@ main{
     cursor: pointer;
 }
 
-
+/* 
 .home__bottom {
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
     border-radius: 40px;
     width: calc( 80vw + 40px);
     margin: 0px auto;
     margin-top: 20px;
     padding: 0px 10px;
     gap: 20px;
+    
 }
 
 .home__bottom__left {
+    max-width: 500px;
+    min-width: 250px;
 
 }
 
@@ -239,9 +242,9 @@ main{
 
 .tel-box {
     padding: 50px 30px;
-    flex-shrink: 0;
     border-radius: 50px;
     background: #141414;
+    width: 100%;
 }
 
 .tel-box-title {
@@ -257,7 +260,6 @@ main{
     margin-top: 30px;
     display: flex;
     background: #222;
-    height: 51px;
     border-radius: 30px;
     justify-content: space-between;
 }
@@ -293,12 +295,17 @@ input::-webkit-inner-spin-button {
     line-height: normal;
     border-radius: 30px;
     background: linear-gradient(247deg, #0095FF -10.05%, #10069F 113.72%);
-/*     width: 130px;
- */    height: 50px;
+    width: 130px;
+    height: 50px;
     flex-shrink: 0;
     padding: 5px;
 }
+*/
 
+
+.tel-box-title {
+margin-bottom: 10px;
+}
 .exchange-rate-box {
     margin-top: 40px;
 display: flex;
@@ -309,11 +316,9 @@ gap: 10px;
 }
 
 .valuta__container {
-/*     width: 195px;
-height: 187px; */
 border-radius: 50px;
 background: #141414;
-padding: 20px;
+padding: 10px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -339,38 +344,28 @@ align-items: center;
 .home__bottom__right {
 
 }
-
+/*
 .my__transactions {
-/* width: clamp(300px,50%,475px);
- */border-radius: 50px;
+border-radius: 50px;
 background: #141414;
-padding: 40px 5%;
+padding: 40px 50px;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 10px;
-min-width: 380px;
+width: 100%;
 
 }
 
-
+*/
 
 .transaction-info{
     display: flex;
     gap: 20px;
 }
 
-.transaction__box {
-    display: flex;
-height: 58px;
-border-radius: 40px;
-justify-content: space-between;
-align-items: center;
-padding: 0px 20px;
-background: #222;
-gap: 25px;
-}
+
 
 .icon-transaction {
     width: 50px;
@@ -383,6 +378,19 @@ gap: 25px;
     flex-direction: column;
     justify-content: center;
 }
+
+
+
+.transaction__box{
+    display: flex;
+    border-radius: 40px;
+    background-color: #000;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+
 
 .name-transation-title {
 
@@ -414,8 +422,11 @@ line-height: normal;
 }
 
 
+
+
+
 .my__transactions-title{
-    color: #474747;
+    color: #DCDCDC;
 font-family: Lato;
 font-size: 24px;
 font-style: normal;
@@ -424,6 +435,61 @@ line-height: normal;
 margin-bottom: 20px;
 }
 
+
+.my__transactions{
+    min-width: 450px;
+    padding: 20px;
+    border-radius: 50px;
+    background: #141414;
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+}
+
+ .home__bottom{
+    border: 1px solid #000;
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    padding: 0px 20px;
+    
+ }
+
+ .home__bottom__left{
+    
+ }
+
+.tel-box{
+    margin-top: 5px;
+    display: flex;
+    background-color: #000;
+    padding: 40px 20px;
+    border-radius: 20px;
+    flex-direction: column;
+}
+.tel-input{
+    background-color: transparent;
+    padding: 5px 0%;
+    font-size: 18px;
+}
+.tel-box-input{
+    background-color: #494949;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tel-pay{
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #0095FF;
+}
+
+ .home__bottom__right{
+    
+ }
 
 
 
@@ -772,7 +838,7 @@ position: relative;
 padding: 20px 0px;
 }
 
-.theme-choose-line::after{
+.theme-choose{
     border-radius: 30px;
     background: rgba(25, 25, 25, 0.50);
     position: absolute;
@@ -781,12 +847,76 @@ padding: 20px 0px;
     width: 50%;
     height: 100%;
     content: "";
+    transition: 0.3s;
+}
+.theme-choose.dark{
+    border-radius: 30px;
+    background: rgba(25, 25, 25, 0.50);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    content: "";
+}
+.theme-choose.ligth{
+    border-radius: 30px;
+    background: rgba(25, 25, 25, 0.50);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
 }
 
-.theme-light {
+
+
+
+/* ------------------------------------------------------------------------------------------------- */
+
+
+.language-choose-line {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 30px;
+background: #262626;
+position: relative;
+padding: 20px 0px;
 }
-.theme-dark {
+.language-choose{
+    border-radius: 30px;
+    background: rgba(25, 25, 25, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
+    transition: 0.3s;
 }
+.language-choose.EN{
+    border-radius: 30px;
+    background: rgba(25, 25, 25, 0.50);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    content: "";
+}
+.language-choose.UA{
+    border-radius: 30px;
+    background: rgba(25, 25, 25, 0.50);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
+}
+
+
 .language-box {
     border-radius: 20px;
     background: #141414;
@@ -799,9 +929,9 @@ font-weight: 600;
 line-height: normal;
 }
 
-.theme-ukrainian {
+.language-ukrainian {
 }
-.theme-english {
+.language-english {
 }
 .documents-box {
     border-radius: 20px;
@@ -993,43 +1123,161 @@ line-height: normal;
 
 
 
-.transaction__box{
-    width: clamp(285px,80%,600px);
-}
 
 @media (min-width: 1200px){
     .my__transaction{
         width: 100%;
+    }
+    .valuta__container:nth-child(4){
+        display: none;
     }
 }
 
 
 
 @media (max-width: 1199.98px){
-    Rules
-    .transaction__box{
-        width: 100%;
-    }
-    .my__transaction{
-        min-width: 300px;
+    
+    .my__transactions{
+        min-width: 350px;
     }
     .home__bottom{
-    flex-wrap: wrap;  
-
-}
-}
-
-@media (max-width: 991.98px){
+        gap: 10px;
+    }
+    .valuta__container:nth-child(3){
+        display: none;
+    }
     
 }
 
+@media (max-width: 991.98px){
+    .home__bottom{
+        flex-direction: column;
+    }
+    
+    .valuta__container:nth-child(3){
+        display: block;
+    }
+    .valuta__container:nth-child(4){
+        display: block;
+    }
+    .my__card-number{
+        font-size: 11px;
+    }
+}
+
+
+
+
+@media (max-width: 890px){
+    
+    .my__card-number{
+        margin-top: 15px;
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+    .my-card, .add__card {
+        width: 200px;
+        height: 125px;
+    }
+
+    .my__card-data{
+        font-size: 12px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+}
+
 @media (max-width: 767.98px){
+    
+    .valuta__container:nth-child(4){
+        display: none;
+    }
+    .my__card-number{
+        margin-top: 15px;
+        font-size: 11px;
+        letter-spacing: 2.4px;
+    }
+    .my-card, .add__card {
+        width: 200px;
+        height: 125px;
+    }
+
+    .my__card-data{
+        font-size: 11px;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+    .my-card-type {
+        color: #FFF;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bolder;
+        line-height: normal;
+    }
+    
+    .my__card-company {
+        width: 40px;
+    }
     
 }
 
 
 
 @media (max-width: 575.98px){
-    
+    .header{
+        width: 100%;
+        height: 75px;
+        flex-shrink: 0;
+        display: block;
+        background: #141414;
+        padding: 0px;
+        position: fixed;
+        bottom: 0;
+        gap: 0;
+    }
+    .logo-header{
+        display: none;
+    }
+    .menu{
+        padding: 0px 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        z-index: 1000;
+    }
+    .menu-element{
+        width: 110px;
+    }
+    .home__bottom{
+        margin-bottom: 100px;
+    }
+
+    main{
+        margin: 0px;
+    }
+
+    .exchange-rate-box{
+        display: none;
+    }
+    /*  .exchange-rate-box{
+        display: none;
+    }
+
+    .tel-box-input{
+        display: flex;
+        flex-direction: column;
+    }
+    .tel-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tel-box-input{
+        margin-top: 10px;
+    }
+    .tel-box{
+        padding: 10px;
+    } */
 }
 

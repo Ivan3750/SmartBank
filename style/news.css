@@ -1,0 +1,26 @@
+body{
+    background-color: #000;
+}
+
+.main__section {
+    border: 1px solid #ffffff;
+    padding: 15vh 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main__box-left {
+}
+.main__img {
+    width: 30vw;
+}
+.main__box-rigth {
+}
+.main__title {
+    color: #FFF;
+font-family: Lato;
+font-size: 60px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
