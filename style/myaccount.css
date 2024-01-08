@@ -1339,9 +1339,7 @@ line-height: normal;
 }
 
 
-*{
-    outline: 2px solid #fff;
-}
+
 @media (max-width: 750.98px){
     .my__transactions{
         width: 350px;
@@ -1351,11 +1349,19 @@ line-height: normal;
     .my__transactions{
         width: 250px;
     }
+    .cards__my__cards{
+        justify-content: center;
+    }
 }
 
 @media (max-width: 575.98px){
+    .cards__money__function{
+        margin-bottom: 75px;
+    }
+
+
 .section__settings.active{
-    min-width: 290px;
+    min-width: 295px;
 }
 .name__block-txt{
     font-size: 25px;
