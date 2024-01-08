@@ -10,12 +10,12 @@ body {
 
 
 main{
-    margin-left: 140px;
+    padding: 0px 20px;
 }
 
 .header {
     width: 100px;
-    height: 100%;
+    height: auto!important;
     flex-shrink: 0;
     background: #141414;
     display: flex;
@@ -24,7 +24,6 @@ main{
     justify-content: start;
     align-items: center;
     padding: 70px 20px 0px 20px;
-    position: absolute;
     gap: 75px 
 
 }
@@ -55,7 +54,7 @@ main{
 
 
 
-.section__home {
+.section__home{
     display: none;
     width: calc(100vw - 220px);
     padding: 0px 40px;
@@ -64,8 +63,8 @@ main{
 .section__cards {
     display: none;
 /*     width: calc(100vw - 200px);
- */    padding: 20px 0px 0px 60px;
-    gap: 20px;
+   padding: 20px 60px 0px 60px;
+ */    gap: 20px;
 }
 
 .section__deposit {
@@ -103,10 +102,11 @@ main{
 
 .section__settings.active {
     display: flex;
-    width: calc(100vw - 260px);
-    padding: 20px 40px;
+    flex-wrap: wrap;
+    min-width: calc(100vw - 260px);
     gap: 25px;
     height: calc(100% - 40px);
+
 }
 
 
@@ -119,11 +119,12 @@ main{
 .my__cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 15px;
     border-radius: 40px;
     background: #141414;
     padding: 25px;
-    width: 80vw;
+    max-width: 80vw;
     margin: 10px auto;
 
 }
@@ -449,7 +450,7 @@ margin-bottom: 20px;
  .home__bottom{
     border: 1px solid #000;
     display: flex;
-    width: 80vw;
+    max-width: 80vw;
     justify-content: space-between;
     padding: 0px 20px;
     
@@ -503,7 +504,8 @@ margin-bottom: 20px;
     border-radius: 40px;
     background: #141414;
     padding: 25px;
-    width: 270px;
+    max-width: 270px;
+    height: 100%;
     
 }
 
@@ -516,17 +518,18 @@ margin-bottom: 20px;
 /*     width: 80vw;
  *//*     align-items: center;
  */
- margin-left: 50px;
-}
+/*  margin-left: 50px;
+ */}
 .function__top {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 .cards__status {
+    max-width: 350px;
     border-radius: 29px;
 background: linear-gradient(231deg, #FFD700 5.62%, #FF740F 122.33%);
-padding: 40px 85px 40px 35px;
+padding: 40px 35px 40px 35px;
 }
 .cards__status-type {
 
@@ -541,7 +544,7 @@ line-height: normal;
     margin: 20px 0px;
     color: #FFF;
 text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-font-family: Lato;font-size: 40px;
+font-family: Lato;font-size: 30px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -603,7 +606,8 @@ background: linear-gradient(95deg, #0095FF 5.33%, #10069F 105.32%);
 
 
 .transaction-list{
-    width: 500px;
+    min-width: 350px;
+    max-width: 500px;
     height: calc(100% - 60px);
     padding: 20px;
     border-radius: 50px;
@@ -687,7 +691,6 @@ gap: 10px;
     
 } */
 .settings__left {
-    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 23px;
@@ -814,7 +817,6 @@ line-height: normal;
 .settings__right {
     display: flex;
     flex-direction: column;
-    width: 50%;
     gap: 10px;
 }
 .theme-box {
@@ -1107,6 +1109,9 @@ line-height: normal;
 
 
 
+.cards__setting-img{
+    display: none;
+}
 
 
 
@@ -1115,14 +1120,23 @@ line-height: normal;
 
 
 
+.menu-element{
+    width: 110px;
+}
 
 
 
 
-
-
-
-
+@media (max-width: 1200px){
+    .settings__left, .settings__right{
+        width: none;
+    }
+}
+@media (max-width: 1300px){
+    .settings__left, .settings__right{
+        width: 100%;
+    }
+}
 
 @media (min-width: 1200px){
     .my__transaction{
@@ -1131,9 +1145,8 @@ line-height: normal;
     .valuta__container:nth-child(4){
         display: none;
     }
+    
 }
-
-
 
 @media (max-width: 1199.98px){
     
@@ -1146,7 +1159,33 @@ line-height: normal;
     .valuta__container:nth-child(3){
         display: none;
     }
+    .cards__function {
     
+ margin-left: 0px;
+}
+.cards__setting-text{
+    padding: 20px 50px;
+}
+.deposit-box, .cashback-box , .credit-box{
+    padding: 30px 30px;
+}
+
+
+    
+}
+
+@media (max-width: 1050.98px){
+    .my-card, .add__card {
+        width: 230px;
+        height: 150px;
+    }
+    .my__card-number{
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+    .cards__setting-text{
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 991.98px){
@@ -1163,10 +1202,36 @@ line-height: normal;
     .my__card-number{
         font-size: 11px;
     }
+    .my-card, .add__card {
+        width: 210px;
+        height: 150px;
+    }
 }
 
-
-
+@media (max-width: 950.98px){
+    .function__bottom{
+        flex-direction: column;
+    }
+    .cards__setting-text{
+        padding: 20px 30px;
+    }
+    .cards__status{
+        padding: 30px;
+    }
+    .cards__setting-text{
+        font-size: 0px;
+        padding: 10px;
+    }
+    
+    .cards__setting-img{
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+    .cards__settings{
+        gap: 5px;
+    }
+}
 
 @media (max-width: 890px){
     
@@ -1185,11 +1250,34 @@ line-height: normal;
         margin-top: 20px;
         margin-left: 40px;
     }
+    .transaction-list{
+    }
+    .cards__my__cards> .my-card {
+        width: 150px;
+        height: 100px;
+    }
+    .cards__my__cards> .add__card {
+        width: 150px;
+        height: 100px;
+    }
+
+    .cards__my__cards>.my-card> .my__card-number{
+        font-size: 8px;
+    }
 }
 
 @media (max-width: 767.98px){
-    
+    .my__transactions{
+        width: 450px;
+    }
+    .section__cards.active{
+        display: flex;
+        flex-direction: column;
+    }
     .valuta__container:nth-child(4){
+        display: none;
+    }
+    .valuta__container:nth-child(3){
         display: none;
     }
     .my__card-number{
@@ -1220,11 +1308,207 @@ line-height: normal;
         width: 40px;
     }
     
+    .cards__my__cards{
+    
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        border-radius: 40px;
+        background: #141414;
+        padding: 25px;
+        max-width: none;
+        height: 100%;
+        
+    
+}
+.cards__setting-img{
+    display: none;
+}
+.cards__setting-text{
+    font-size: 15px;
+    padding: 20px   ;
+}
+
+.function__top{
+    justify-content: space-around;
+}
+
+.cards__my__cards{
+    flex-wrap: wrap;
+}
+}
+
+
+*{
+    outline: 2px solid #fff;
+}
+@media (max-width: 750.98px){
+    .my__transactions{
+        width: 350px;
+    }
+}
+@media (max-width: 450.98px){
+    .my__transactions{
+        width: 250px;
+    }
+}
+
+@media (max-width: 575.98px){
+.section__settings.active{
+    min-width: 290px;
+}
+.name__block-txt{
+    font-size: 25px;
+}
+.name__block-img {
+    width: 75px;
+    height: 75px;
+}
+.name__block {
+    flex-shrink: 0;
+    border-radius: 27px;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
 }
 
 
 
-@media (max-width: 575.98px){
+.tel__block-number {
+    color: rgba(145, 145, 145, 0.23);
+    font-family: Lato;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.tel__block-btn{
+    border-radius: 12px;
+    padding: 3px;
+    background: linear-gradient(230deg, #FF740F -24.32%, #FF4242 119.81%);
+}
+.tel__block-img {
+    width: 40px;
+    height: 40px;
+}
+.email__block-btn{
+    padding: 3px;
+    border-radius: 12px;
+background: linear-gradient(230deg, #FF740F -24.32%, #FF4242 119.81%);
+}
+
+.email__block, .tel__block {
+    justify-content: space-between;
+    display: flex;
+    border-radius: 20px;
+background: #141414;
+padding: 30px 20px 30px 30px ;
+align-items: center;
+}
+
+
+
+.email__block-number {
+    color: rgba(145, 145, 145, 0.23);
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.email__block-img {
+
+    width: 40px;
+    height: 40px;
+}
+
+
+.password__block {
+    border-radius: 20px;
+background: #141414;
+padding: 25px;
+}
+.password__block-title {
+    color: rgba(255, 255, 255, 0.50);
+font-family: Lato;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.password__block-txt {
+    color: #FFF;
+font-family: Lato;
+font-size: 35px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.password__block-line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.password__block-btn {
+    padding: 5px 20px;
+    border-radius: 20px;
+background: linear-gradient(259deg, #BD00FF -19.3%, #E1447D 104.11%);
+color: #FFF;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+display: flex;
+align-items: center;
+}
+
+
+
+
+
+.theme-dark, .theme-light{
+    font-size: 14px;
+}
+
+.language-english, .language-ukrainian{
+    font-size: 14px;
+}
+
+.documents-function{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.upload-documents, .diia-block{
+    width: 100%;
+}
+
+
+
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .transaction-list{
+        min-width: 250px;
+    }
+    .cards__setting-img{
+        display: block;
+    }
+    .cards__setting-text{
+        font-size: 0px;
+    }
+    .cards__status{
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        flex-direction: column;
+    }
     .header{
         width: 100%;
         height: 75px;
@@ -1235,6 +1519,7 @@ line-height: normal;
         position: fixed;
         bottom: 0;
         gap: 0;
+        z-index: 5000;
     }
     body{
         display: block;
@@ -1254,11 +1539,9 @@ line-height: normal;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        z-index: 1000;
+        z-index: 5000;
     }
-    .menu-element{
-        width: 110px;
-    }
+   
     .home__bottom{
         margin-bottom: 100px;
     }
@@ -1270,7 +1553,7 @@ line-height: normal;
     .exchange-rate-box{
         display: none;
     }
-   .my-card, .add__card{
+   /* .my-card, .add__card{
     width: none;
     height: 75px;
     border-radius: 20px;
@@ -1296,10 +1579,56 @@ line-height: normal;
     font-size: 10px;
     margin-top: 10px;
     margin-left: 30px;
+} */
+
+.my__cards{
+
+    flex-direction: column;
+    align-items: center;
 }
 
 .my__transactions{    
 min-width: 250px!important;
 }
+.tel-input{
+    width: 160px;
 }
 
+
+.my__transactions-title{
+    font-size: 20px;
+}
+.name-transation-title {
+
+    color: #FFF;
+font-family: Lato;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.name-transation-category {
+
+    color: rgba(255, 255, 255, 0.60);
+font-family: Lato;
+font-size: 8px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.transaction__box{
+    display: flex;
+    border-radius: 40px;
+    background-color: #000;
+    justify-content: space-between;
+    padding: 8px 18px;
+    align-items: center;
+}
+
+}
+
+.menu-element{
+    width: 110px!important;
+}
