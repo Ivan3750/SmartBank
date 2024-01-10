@@ -10,7 +10,12 @@ body {
 
 
 main{
-    padding: 0px 20px;
+    padding: 20px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+
 }
 
 .header {
@@ -56,8 +61,8 @@ main{
 
 .section__home{
     display: none;
-    width: calc(100vw - 220px);
-    padding: 0px 40px;
+/*     width: calc(100vw - 220px);
+ */    padding: 0px 40px;
 }
 
 .section__cards {
@@ -79,8 +84,8 @@ main{
 
 .section__settings {
     display: none;
-    width: calc(100vw - 140px);
-}
+/*     width: calc(100vw - 140px);
+ */}
 
 
 
@@ -90,6 +95,7 @@ main{
 
 .section__cards.active {
     display: flex;
+    gap: 80px;
 }
 
 .section__deposit.active {
@@ -103,9 +109,11 @@ main{
 .section__settings.active {
     display: flex;
     flex-wrap: wrap;
-    min-width: calc(100vw - 260px);
+    gap: 30px;
+
+/* /*     min-width: calc(100vw - 260px);
     gap: 25px;
-    height: calc(100% - 40px);
+    height: calc(100% - 40px); */
 
 }
 
@@ -448,12 +456,10 @@ margin-bottom: 20px;
 }
 
  .home__bottom{
-    border: 1px solid #000;
     display: flex;
-    max-width: 80vw;
     justify-content: space-between;
     padding: 0px 20px;
-    
+    gap: 30px;
  }
 
  .home__bottom__left{
@@ -498,8 +504,8 @@ margin-bottom: 20px;
 
 .cards__my__cards{
     
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     gap: 15px;
     border-radius: 40px;
     background: #141414;
@@ -509,6 +515,13 @@ margin-bottom: 20px;
     
 }
 
+.my__cards-top{
+    display: flex;
+/*     flex-direction: column;
+ */}
+.my__cards-menu{
+    display: flex;
+}
 
 .cards__function {
     display: flex;
@@ -1125,9 +1138,28 @@ line-height: normal;
 }
 
 
-
+#homebox{
+    gap: 15px;
+    border-radius: 40px;
+    padding: 25px;
+    max-width: none;
+    height: 175px!important;
+    margin-bottom: 25px;
+}
+#cardsbox{
+    gap: 50px;
+}
 
 @media (max-width: 1200px){
+    #cardsbox{
+        flex-direction: row;
+        margin-left: 0px!important;
+    }
+    .my__cards-top{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
     .settings__left, .settings__right{
         width: none;
     }
@@ -1139,6 +1171,15 @@ line-height: normal;
 }
 
 @media (min-width: 1200px){
+    #cardsbox{
+        flex-direction: row!important;
+        margin-left: 0px!important;
+    }
+    .my__cards-top{
+        display: flex;
+        flex-direction: column!important;
+        gap: 15px;
+    }
     .my__transaction{
         width: 100%;
     }
@@ -1149,7 +1190,10 @@ line-height: normal;
 }
 
 @media (max-width: 1199.98px){
-    
+    #cardsbox{
+        flex-direction: row;
+        margin-left: 0px!important;
+    }
     .my__transactions{
         min-width: 350px;
     }
@@ -1235,6 +1279,7 @@ line-height: normal;
 
 @media (max-width: 890px){
     
+    
     .my__card-number{
         margin-top: 15px;
         font-size: 12px;
@@ -1267,6 +1312,113 @@ line-height: normal;
 }
 
 @media (max-width: 767.98px){
+    .my__cards-top{
+        display: flex;
+        flex-direction: row!important;
+        gap: 15px;
+    }
+    .section__cards.active{
+        width: 100vw;
+    }
+    main{
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    .my__cards{
+        width: 1000px;
+        max-width: none;
+        flex-wrap: nowrap;
+    }
+
+    .cards__my__cards{
+        max-width: none;
+        flex-wrap: nowrap;
+        background-color: transparent;
+    }
+    
+    .card-choose{
+        margin: 5px auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #797979;
+        background-color: #494949;
+    }
+
+    .my-card, .add__card{
+        min-width: 400px;
+        min-height: 250px;
+    }
+    .transaction-list{
+        margin: 0px auto;
+        max-width: 600px;
+        min-width: 600px;
+    }
+
+.my-card{
+
+    margin: 0px auto;
+}
+
+    .my__cards-menu{
+        width: 75px;
+        margin: 0px auto;
+        display: flex;
+        gap: 5px;
+        margin-top: 20px;
+        
+    }
+
+    .my__cards-top{
+        gap: 90px;
+        margin-left: 100px;
+    }
+
+
+
+
+    .header{
+        width: 100%;
+        height: 75px;
+        flex-shrink: 0;
+        display: block;
+        background: #141414;
+        padding: 0px;
+        position: fixed;
+        bottom: 0;
+        gap: 0;
+        z-index: 5000;
+    }
+    body{
+        display: block;
+    }
+    /* !!!! */
+    main{
+        margin: 0px;
+    }
+
+    .section__home.active{
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-header{
+        display: none;
+    }
+    .menu{
+        padding: 0px 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        z-index: 5000;
+    }
+   
+    .home__bottom{
+        margin-bottom: 100px;
+    }
+
     .my__transactions{
         width: 450px;
     }
@@ -1280,7 +1432,7 @@ line-height: normal;
     .valuta__container:nth-child(3){
         display: none;
     }
-    .my__card-number{
+    /* .my__card-number{
         margin-top: 15px;
         font-size: 11px;
         letter-spacing: 2.4px;
@@ -1321,6 +1473,14 @@ line-height: normal;
         
     
 }
+ */
+ .cards__status{
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 .cards__setting-img{
     display: none;
 }
@@ -1329,23 +1489,51 @@ line-height: normal;
     padding: 20px   ;
 }
 
+ .my__card-number{
+    margin-top: 70px;
+    font-size: 20px;
+    letter-spacing: 7px;
+ }
+
+ .my__card-data{
+    margin-top: 30px;
+    font-size: 18px;
+ }
+ .my-card__top{
+    margin-top: 15px;
+ }
+
+ .my-card__type{
+    font-size: 24px;
+    margin: 10px;
+ }
+ .my__card-company{
+    width: auto;
+    height: 70px;
+ }
 .function__top{
-    justify-content: space-around;
+    flex-direction: column;
 }
 
 .cards__my__cards{
     flex-wrap: wrap;
 }
+#homebox{
+    height: 100%!important;
+}
+
 }
 
 
 
 @media (max-width: 750.98px){
+    
     .my__transactions{
         width: 350px;
     }
 }
 @media (max-width: 450.98px){
+
     .my__transactions{
         width: 250px;
     }
@@ -1355,10 +1543,61 @@ line-height: normal;
 }
 
 @media (max-width: 575.98px){
+    
+    .menu-img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .my__card-number{
+        margin-top: 20px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    
+
+ .my__card-data{
+    margin-top: 20px;
+    font-size: 12px;
+ }
+ .my-card__top{
+    margin-top: 10px;
+ }
+
+ .my-card__type{
+    font-size: 18px;
+    margin: 10px;
+ }
+ .my__card-company{
+    width: auto;
+    height: 30px;
+ }
+.function__top{
+    flex-direction: column;
+}
+
+.cards__my__cards{
+    flex-wrap: wrap;
+}
+
+
+.my-card, .add__card {
+    min-width: 250px!important;
+    min-height: 180px!important;
+}
+    .my__cards-top{
+        gap: 90px;
+        margin-left: 0px!important;
+    }
+
     .cards__money__function{
         margin-bottom: 75px;
     }
-
+    .cards__setting-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 .section__settings.active{
     min-width: 295px;
@@ -1515,52 +1754,13 @@ align-items: center;
         padding: 30px;
         flex-direction: column;
     }
-    .header{
-        width: 100%;
-        height: 75px;
-        flex-shrink: 0;
-        display: block;
-        background: #141414;
-        padding: 0px;
-        position: fixed;
-        bottom: 0;
-        gap: 0;
-        z-index: 5000;
-    }
-    body{
-        display: block;
-    }
-    .section__home.active{
-        padding: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo-header{
-        display: none;
-    }
-    .menu{
-        padding: 0px 30px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        z-index: 5000;
-    }
-   
-    .home__bottom{
-        margin-bottom: 100px;
-    }
-
-    main{
-        margin: 0px;
-    }
-
+    
+    /* !!! */
     .exchange-rate-box{
         display: none;
     }
-   /* .my-card, .add__card{
-    width: none;
+/*    .my-card, .add__card{
+    width: 250px;
     height: 75px;
     border-radius: 20px;
     padding: 8px;
@@ -1585,8 +1785,8 @@ align-items: center;
     font-size: 10px;
     margin-top: 10px;
     margin-left: 30px;
-} */
-
+}
+ */
 .my__cards{
 
     flex-direction: column;
@@ -1633,8 +1833,11 @@ line-height: normal;
     align-items: center;
 }
 
-}
+
+
+
 
 .menu-element{
     width: 110px!important;
+}
 }

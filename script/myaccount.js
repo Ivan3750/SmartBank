@@ -84,5 +84,30 @@ langEN.addEventListener("click", ()=>{
 
 
 
+const cardChoose = document.querySelectorAll('.card-choose');
+const Cards = document.querySelector('.my__cards-top');
 
+cardChoose[0].addEventListener("click", ()=>{
 
+Cards.style.marginLeft = "80px"
+cardChoose[0].style.backgroundColor = "#797979"
+cardChoose[1].style.backgroundColor = "#494949"
+cardChoose[2].style.backgroundColor = "#494949"
+
+})
+cardChoose[1].addEventListener("click", ()=>{
+    
+    Cards.style.marginLeft = "-480px"
+    cardChoose[1].style.backgroundColor = "#797979"
+    cardChoose[0].style.backgroundColor = "#494949"
+    cardChoose[2].style.backgroundColor = "#494949"
+    
+})
+cardChoose[2].addEventListener("click", ()=>{
+    cardChoose[2].style.backgroundColor = "#797979"
+    cardChoose[0].style.backgroundColor = "#494949"
+    cardChoose[1].style.backgroundColor = "#494949"
+
+Cards.style.marginLeft = "-1000px"
+
+})

@@ -29,7 +29,7 @@ btnSumbit.addEventListener('click', function (event) {
     }
     else {
         displayError("","", true)
-        window.location.href = "../Html/card.html" 
+        window.location.href = "../pages/card.html" 
     }
         UserNameCheck()
         EmailCheck()
@@ -94,7 +94,7 @@ email.addEventListener("change", function(){
     EmailCheck()
 })
 function passwordCheck(){
-    const passwordCheck = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]).{8,}$/;
+    const passwordCheck = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
     
     if (!passwordCheck.test(password.value)) {
         password.style.border = "3px solid #f00"

@@ -1244,6 +1244,14 @@ line-height: normal;
     }
     
     @media (max-width: 420px) {
+        .aos-init .aos-animate{
+            display: none;
+        }
+        .info__box{
+            display: flex;
+            flex-direction: column;
+
+        }
         .footer__left__block {
             margin-top: 60px;
             display: flex;
