@@ -22,7 +22,7 @@ main{
 
 .header {
     width: 100px;
-    height: auto!important;
+    height: 100vh;
     flex-shrink: 0;
     background: #141414;
     display: flex;
@@ -78,6 +78,10 @@ main{
     display: none;
  /*    width: calc(100vw - 140px); */
 }
+.section__credit {
+    display: none;
+ /*    width: calc(100vw - 140px); */
+}
 
 .section__cashback {
     display: none;
@@ -101,8 +105,11 @@ main{
 }
 
 .section__deposit.active {
-    display: block;
-}
+   display: block;
+} 
+.section__credit.active {
+   display: block;
+} 
 
 .section__cashback.active {
     display: block;
@@ -509,7 +516,7 @@ margin-bottom: 20px;
     background: #141414;
     padding: 25px;
     max-width: 270px;
-    height: 100%;
+    height: 90%;
     
 }
 
@@ -1045,6 +1052,7 @@ background: linear-gradient(231deg, #4BD181 5.62%, rgba(0, 255, 209, 0.61) 122.3
 width: calc(100vw - 240px);
 padding: 20px;
 }
+
 .deposit__overtitle {
     color: rgba(255, 255, 255, 0.75);
 font-family: Lato;
@@ -1154,6 +1162,123 @@ line-height: normal;
 
 
 
+/* CREDIT */
+
+.section__credit.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.credit__info {
+    border-radius: 29px;
+background: linear-gradient(231deg, #FF4242 5.62%, #E1447D 122.33%);
+width: calc(100vw - 240px);
+padding: 20px;
+}
+.credit__overtitle {
+    color: rgba(255, 255, 255, 0.75);
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.credit__balance {
+    color: #FFF;
+text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+font-family: Lato;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.credit__inset {
+    color: #FFF;
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.my__credits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 50px;
+background: #252525;
+width: 100%;
+height: 500px;  /* CHANGE!!! */
+}
+.block-category {
+    display: flex;
+    padding: 5px 50px;
+    justify-content: space-between;
+}
+.category-name {
+    text-align: center;
+    width: 80px;
+    color: #FFF;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.credit {
+    padding: 0px 50px;
+    border-radius: 30px;
+background: #323131;
+
+height: 75px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.credit-time {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.credit-name {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+line-height: normal;
+}
+.credit-balance {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.credit-procent {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.credit-status {
+    height: 50px;
+    width: 50px;
+    margin: 11px;
+    border-radius: 50%;
+    border: 4px solid #0dff00;
+}
+
+/* C END */
 
 
 
@@ -1163,6 +1288,123 @@ line-height: normal;
 
 
 
+/* CASH */
+
+.section__cashback.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cashback__info {
+    border-radius: 29px;
+background: linear-gradient(231deg, #FF4242 5.62%, #E1447D 122.33%);
+width: calc(100vw - 240px);
+padding: 20px;
+}
+.cashback__overtitle {
+    color: rgba(255, 255, 255, 0.75);
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.cashback__balance {
+    color: #FFF;
+text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+font-family: Lato;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.cashback__inset {
+    color: #FFF;
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.my__cashbacks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 50px;
+background: #252525;
+width: 100%;
+height: 500px;  /* CHANGE!!! */
+}
+.block-category {
+    display: flex;
+    padding: 5px 50px;
+    justify-content: space-between;
+}
+.category-name {
+    text-align: center;
+    width: 80px;
+    color: #FFF;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.cashback {
+    padding: 0px 50px;
+    border-radius: 30px;
+background: #323131;
+
+height: 75px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.cashback-time {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.cashback-name {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+line-height: normal;
+}
+.cashback-balance {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.cashback-procent {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.cashback-status {
+    height: 50px;
+    width: 50px;
+    margin: 11px;
+    border-radius: 50%;
+    border: 4px solid #0dff00;
+}
+
+/* C END */
 
 
 
@@ -1648,6 +1890,12 @@ line-height: normal;
     .deposit__info{
         width: calc(100% - 40px);
     }
+    .section__credit.active{
+        width: 100%;
+    }
+    .credit__info{
+        width: calc(100% - 40px);
+    }
     
     .my__transactions{
         width: 350px;
@@ -1760,6 +2008,121 @@ line-height: normal;
     line-height: normal;
     }
     .deposit-status {
+        height: 30px;
+        width: 30px;
+        margin: 11px;
+        border-radius: 50%;
+        border: 4px solid #0dff00;
+    }
+    
+
+
+    .credit__info{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .credit__overtitle {
+        color: rgba(255, 255, 255, 0.75);
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .credit__balance {
+        color: #FFF;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    font-family: Lato;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .credit__inset {
+        color: #FFF;
+    font-family: Lato;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .my__credits {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 50px;
+    background: #252525;
+    width: 100%;
+    height: 500px;  /* CHANGE!!! */
+    }
+    .block-category {
+        display: flex;
+        padding: 5px 30px;
+        justify-content: space-between;
+    }
+    .category-name {
+        text-align: center;
+        width: 60px;
+        color: #FFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .credit {
+        padding: 0px 30px;
+        border-radius: 30px;
+    background: #323131;
+    
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .credit-time {
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+    }
+    .credit-name {
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    }
+    .credit-balance {
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    }
+    .credit-procent {
+        text-align: center;
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .credit-status {
         height: 30px;
         width: 30px;
         margin: 11px;
@@ -2077,8 +2440,3 @@ line-height: normal;
 }
 }
 
-
-
-*{
-outline: 2px solid #fff;
-}

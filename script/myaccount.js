@@ -1,8 +1,12 @@
 const depositBTN = document.querySelector('.deposit-box');
+const creditBTN = document.querySelector('.credit-box');
+const cashbackBTN = document.querySelector('.cashback-box');
 const sectionHome = document.querySelector('.section__home');
 const sectionCards = document.querySelector('.section__cards');
 const sectionSettings = document.querySelector('.section__settings');
 const sectionDeposit = document.querySelector('.section__deposit');
+const sectionCredit = document.querySelector('.section__credit');
+const sectionCashback = document.querySelector('.section__cashback');
 const menuElements = document.querySelectorAll('.menu-element');
 
 menuElements.forEach((elements, index) => {
@@ -17,25 +21,33 @@ menuElements.forEach((elements, index) => {
                 sectionCards.classList.remove("active")
                 sectionSettings.classList.remove("active")
                 sectionDeposit.classList.remove("active")
-                depo
+                sectionCredit.classList.remove("active")
+                sectionCashback.classList.remove("active")
+                
                 break;
                 case 1:
                     sectionCards.classList.add("active")
                     sectionHome.classList.remove("active")
                     sectionSettings.classList.remove("active")
                     sectionDeposit.classList.remove("active")
+                    sectionCredit.classList.remove("active")
+                    sectionCashback.classList.remove("active")
                     break;
                     case 2:
                         sectionSettings.classList.add("active")
                         sectionCards.classList.remove("active")
                         sectionHome.classList.remove("active")
                         sectionDeposit.classList.remove("active")
+                        sectionCredit.classList.remove("active")
+                        sectionCashback.classList.remove("active")
                         break;
                         defaulf:
                         sectionHome.classList.add("active")
                         sectionCards.classList.remove("active")
                         sectionSettings.classList.remove("active")
                         sectionDeposit.classList.remove("active")
+                        sectionCredit.classList.remove("active")
+                        sectionCashback.classList.remove("active")
 
         }
     })
@@ -49,6 +61,28 @@ depositBTN.addEventListener("click", ()=>{
     sectionCards.classList.remove("active")
     sectionSettings.classList.remove("active")
     sectionHome.classList.remove("active")
+    sectionCredit.classList.remove("active")
+    sectionCashback.classList.remove("active")
+})
+creditBTN.addEventListener("click", ()=>{
+
+
+    sectionCredit.classList.add("active")
+    sectionDeposit.classList.remove("active")
+    sectionCards.classList.remove("active")
+    sectionSettings.classList.remove("active")
+    sectionHome.classList.remove("active")
+    sectionCashback.classList.remove("active")
+})
+cashbackBTN.addEventListener("click", ()=>{
+
+
+    sectionCredit.classList.remove("active")
+    sectionDeposit.classList.remove("active")
+    sectionCards.classList.remove("active")
+    sectionSettings.classList.remove("active")
+    sectionHome.classList.remove("active")
+    sectionCashback.classList.add("active")
 })
 
 
