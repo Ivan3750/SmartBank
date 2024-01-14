@@ -98,6 +98,7 @@ main{
 .form__card {
 }
 .feture__card {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

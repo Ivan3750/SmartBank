@@ -25,20 +25,23 @@ InputSurname.addEventListener("input", function(){
 })
 
 
+let ValutaInfo = ""
 
-
-
+let statusValuta = false
 valutaCard[0].addEventListener("click", function(){
     valutaCard[0].style.border = "2px solid blue"
     valutaCard[1].style.border = "0"
     valutaCard[2].style.border = "0"
-    
+    ValutaInfo = "USD"
+    statusValuta = true    
 })
 
 valutaCard[1].addEventListener("click", function(){
     valutaCard[1].style.border = "2px solid blue"
     valutaCard[0].style.border = "0"
     valutaCard[2].style.border = "0"
+    ValutaInfo = "UAH"
+    statusValuta = true    
     
 })
 
@@ -46,10 +49,12 @@ valutaCard[2].addEventListener("click", function(){
     valutaCard[2].style.border = "2px solid blue"
     valutaCard[1].style.border = "0"
     valutaCard[0].style.border = "0"
+    ValutaInfo = "EUR"
+    statusValuta = true    
     
 })
-
-
+let cardNumberInfo = ""
+let cardExpiresInfo = ""
 CreateBtn.addEventListener("click", function(event){
     event.preventDefault()
         let min = 1000;
@@ -59,9 +64,11 @@ CreateBtn.addEventListener("click", function(event){
         let randomtoNum = Math.floor(Math.random() * (99 - 10 + 1)) + 10;
         let randCVV = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
         cardNumber.innerHTML = `3750 87${randomtoNum} ${randomNum} ${randomNumend}`
+        cardNumberInfo = `3750 87${randomtoNum} ${randomNum} ${randomNumend}`
         const currentDate = new Date();
         CVV.innerHTML = randCVV
         cardExpiresTxt.innerHTML = currentDate.getMonth() + 1 + "/" + (Number(currentDate.getFullYear()) - 1995)
+        cardExpiresInfo = currentDate.getMonth() + 1 + "/" + (Number(currentDate.getFullYear()) - 1995)
         if (InputName.value.length === 0 && InputSurname.value.length === 0 ) {
             cardName.innerHTML = "Smart Bank"
         }else{
@@ -82,13 +89,15 @@ function changeColorCard(newcolor){
     CVV.style.color = newcolor
 }
 
-
+let cardType = "none"
 radioBlack.addEventListener("click", function(){
     if (radioBlack.checked) {
         radioPink.checked = false
         radioWhite.checked = false
         cardNew.style.backgroundColor = "black"
         changeColorCard("white")
+        cardType = "Чорна карта"
+        
     } else {
         
     }
@@ -99,6 +108,7 @@ radioPink.addEventListener("click", function(){
         radioWhite.checked = false
         cardNew.style.backgroundColor = "#E1447D"
         changeColorCard("white")
+        cardType = "Дитяча  карта"
     } else {
         
     }
@@ -110,30 +120,36 @@ radioWhite.addEventListener("click", function(){
         radioPink.checked = false
         cardNew.style.backgroundColor = "white"
         changeColorCard("black")
+        cardType = "Біла  карта"
         
     }
 })
-
+let cardLogoInfo = ""
 
 const logoCards = document.querySelectorAll('.box-company');
 const cardLogo = document.querySelector('.company__card');
-
+let statusLogo = false
 logoCards.forEach((logoCard) => {
     logoCard.addEventListener("click", function() {
         logoCards.forEach((choose) => {
             choose.classList.remove("on");
             console.log(logoCard);
+            statusLogo = true
             const selectedIndex = Array.from(logoCards).indexOf(logoCard);
             switch (selectedIndex) {
                 case 0:
                     cardLogo.src = "../image/Mastercard Logo.png";
+                    cardLogoInfo = "../image/Mastercard Logo.png"
                     break;
-                case 1:
-                    cardLogo.src = "../image/VISA-logo.png";
-                    cardLogo.style.height = "75px"
-                    break;
-                case 2:
-                    cardLogo.src = "../image/bitcoin.png";
+                    case 1:
+                        cardLogo.src = "../image/VISA-logo.png";
+                        cardLogoInfo = "../image/VISA-logo.png"
+                        cardLogo.style.height = "75px"
+                        break;
+                        case 2:
+                            cardLogo.src = "../image/bitcoin.png";
+                            cardLogoInfo = "../image/bitcoin.png"
+                            ValutaInfo = "COIN"
                     cardLogo.style.height = "25px"
                     valutaCard[2].style.border = "0"
                     valutaCard[1].style.border = "0"
@@ -183,8 +199,8 @@ colorChoose.forEach((color, index) => {
 const imgChoose = document.querySelectorAll('.card--background');
 
 imgChoose.forEach((img, index) => {
-    console.log(img)
-    img.addEventListener("click", function() {
+/*     console.log(img)
+ */    img.addEventListener("click", function() {
         switch (index) {
             case 0:
                 cardNew.classList.add("img")
@@ -303,10 +319,74 @@ cardFirst.classList.add("show")
 cardContinue.addEventListener("click", function(e){
     e.preventDefault()
     cardFirst.classList.remove("show")
-    cardSecond.classList.add("show")
+        cardSecond.classList.add("show")
+    /* if (InputName.value.length > 3 &&
+        InputSurname.value.length > 3 &&
+        statusValuta == true &&
+        statusLogo == true
+         ){
+        
+        InputName.style.border="0px solid red"
+        InputSurname.style.border="0px solid red"
+    } *//* else{
+        InputName.style.border="2px solid red"
+        InputSurname.style.border="2px solid red"
+        setTimeout(()=>{
+            alert('Заполните все поля')
+
+    }, 1000) */
+    /* } */
 })
 cardBack.addEventListener("click", function(){
     
     cardFirst.classList.add("show")
     cardSecond.classList.remove("show")
 })
+
+
+
+   
+
+/* console.log(myCards)
+ */
+
+
+
+let myCards = JSON.parse(sessionStorage.getItem("myCards"));
+
+
+balanceValue = "0.00";
+CreateBtn.addEventListener("click", function(){
+    let InputNameValue = InputName.value
+    let InputSurnameValue = InputSurname.value
+    backgroundCard = cardNew.style.backgroundColor 
+    card = {number: cardNumberInfo,
+        expires: cardExpiresInfo, 
+        background: backgroundCard, 
+        valuta: ValutaInfo, 
+        company: cardLogoInfo,
+        balance: balanceValue, 
+        type: cardType }
+    sessionStorage.setItem("inputname", InputNameValue)
+    sessionStorage.setItem("inputsurname", InputSurnameValue)
+    if(myCards == null){
+        myCards = [card]
+    }else{
+
+        myCards.push(card)
+    }
+   
+    
+ console.log(card)
+ sessionStorage.setItem("myCards",  JSON.stringify(myCards))
+ /* sessionStorage.setItem("card", JSON.stringify(card)); */
+ window.location.href = "../pages/myaccount.html" 
+
+})
+
+
+/* cardNumber cardExpiresTxt cardLogo cardNew */
+
+
+
+

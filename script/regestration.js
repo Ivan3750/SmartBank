@@ -28,6 +28,13 @@ btnSumbit.addEventListener('click', function (event) {
 
     }
     else {
+        let UserInfo = {
+            Username: userName.value,
+            Password: password.value,
+            Email: email.value,
+            PhoneNumber: tel.value,
+            };
+        sessionStorage.setItem("UserInfo",  JSON.stringify(UserInfo))
         displayError("","", true)
         window.location.href = "../pages/card.html" 
     }
@@ -130,6 +137,8 @@ function telCheck(){
 tel.addEventListener("change", function(){
     telCheck()
 })
+
+
 
 
 

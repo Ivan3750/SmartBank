@@ -5,6 +5,7 @@
 
 body {
     background-color: #1E1E1E;
+   /*  background-color: #282828; */
     display: flex;
 }
 
@@ -15,6 +16,7 @@ main{
     gap: 10px;
     justify-content: center;
     width: 100%;
+
 
 }
 
@@ -74,7 +76,7 @@ main{
 
 .section__deposit {
     display: none;
-    width: calc(100vw - 140px);
+ /*    width: calc(100vw - 140px); */
 }
 
 .section__cashback {
@@ -137,17 +139,13 @@ main{
 
 }
 
-
-.my-card.card-black {
-    margin: 0;
-}
-
 .my__card-number {
     text-align: center;
 }
 
 .my-card {
     margin-top: 50px;
+    margin: 0;
     transition: 0.5s;
     width: 250px;
     height: 150px;
@@ -758,6 +756,7 @@ line-height: normal;
 .email__block {
     justify-content: space-between;
     display: flex;
+    gap: 10px;
     border-radius: 20px;
 background: #141414;
 padding: 30px 20px 30px 50px ;
@@ -1033,7 +1032,123 @@ line-height: normal;
 
 
 
+/* DEPOSIT */
 
+.section__deposit.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.deposit__info {
+    border-radius: 29px;
+background: linear-gradient(231deg, #4BD181 5.62%, rgba(0, 255, 209, 0.61) 122.33%);
+width: calc(100vw - 240px);
+padding: 20px;
+}
+.deposit__overtitle {
+    color: rgba(255, 255, 255, 0.75);
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.deposit__balance {
+    color: #FFF;
+text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+font-family: Lato;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.deposit__inset {
+    color: #FFF;
+font-family: Lato;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.my__deposits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 50px;
+background: #252525;
+width: 100%;
+height: 500px;  /* CHANGE!!! */
+}
+.block-category {
+    display: flex;
+    padding: 5px 50px;
+    justify-content: space-between;
+}
+.category-name {
+    text-align: center;
+    width: 80px;
+    color: #FFF;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.deposit {
+    padding: 0px 50px;
+    border-radius: 30px;
+background: #323131;
+
+height: 75px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.deposit-time {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.deposit-name {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+line-height: normal;
+}
+.deposit-balance {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.deposit-procent {
+    width: 80px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.deposit-status {
+    height: 50px;
+    width: 50px;
+    margin: 11px;
+    border-radius: 50%;
+    border: 4px solid #0dff00;
+}
+
+/* D END */
 
 
 
@@ -1527,12 +1642,131 @@ line-height: normal;
 
 
 @media (max-width: 750.98px){
+    .section__deposit.active{
+        width: 100%;
+    }
+    .deposit__info{
+        width: calc(100% - 40px);
+    }
     
     .my__transactions{
         width: 350px;
     }
 }
 @media (max-width: 450.98px){
+    .deposit__info{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .deposit__overtitle {
+        color: rgba(255, 255, 255, 0.75);
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .deposit__balance {
+        color: #FFF;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    font-family: Lato;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .deposit__inset {
+        color: #FFF;
+    font-family: Lato;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .my__deposits {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 50px;
+    background: #252525;
+    width: 100%;
+    height: 500px;  /* CHANGE!!! */
+    }
+    .block-category {
+        display: flex;
+        padding: 5px 30px;
+        justify-content: space-between;
+    }
+    .category-name {
+        text-align: center;
+        width: 60px;
+        color: #FFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .deposit {
+        padding: 0px 30px;
+        border-radius: 30px;
+    background: #323131;
+    
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .deposit-time {
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+    }
+    .deposit-name {
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    }
+    .deposit-balance {
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    }
+    .deposit-procent {
+        text-align: center;
+        width: 60px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .deposit-status {
+        height: 30px;
+        width: 30px;
+        margin: 11px;
+        border-radius: 50%;
+        border: 4px solid #0dff00;
+    }
+    
 
     .my__transactions{
         width: 250px;
@@ -1658,10 +1892,11 @@ align-items: center;
 .email__block-number {
     color: rgba(145, 145, 145, 0.23);
 font-family: Lato;
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+margin-right: 5px;
 }
 .email__block-img {
 
@@ -1840,4 +2075,10 @@ line-height: normal;
 .menu-element{
     width: 110px!important;
 }
+}
+
+
+
+*{
+outline: 2px solid #fff;
 }
