@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/news.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дитяча карта</title>
+    <link rel="stylesheet" href="../style/pinkcard.css">
     <link rel="stylesheet" href="../style/CardModal.css">
     <link rel="stylesheet" href="../style/load.css">
     <link rel="stylesheet" href="../style/multi.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../image/favicon.png" type="image/x-icon">
-    <title>Новини</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
 </head>
 <body class="body">
     <div class="modal__cards">
@@ -16,7 +18,7 @@
             <img src="../image/close-100.png" alt="" class="modal-btn">
             <h2 class="modal__cards-title">Обирай потрібну карту</h2>
             <div class="modal__block">
-                <a href="./pages/blackcard.html">
+                <a href="../pages/blackcard.html">
                 <div class="modal__cards-box">
                     <div class="modal-card card-black">
                         <div class="modal-card__top">
@@ -30,7 +32,7 @@
                     <p class="modal__card-info">Престижна картка підкреслює статус власника. Це найвищий рівень турботи, безпеки і конфіденційності. </p>
                 </div>
                 </a>
-                <a href="./pages/pinkcard.html">
+                <a href="../pages/pinkcard.html">
                 <div class="modal__cards-box">
                     <div class="modal-card card-pink">
                         <div class="modal-card__top">
@@ -44,7 +46,7 @@
                     <p class="modal__card-info">Картка для клієнтів від 6 до 14 років. Включає в себе батьківський контроль, а також цікаві можливості. </p>
                 </div>
                 </a>
-                <a href="./pages/whitecard.html">
+                <a href="../pages/whitecard.html">
                 <div class="modal__cards-box">
                     <div class="modal-card card-white">
                         <div class="modal-card__top">
@@ -76,19 +78,19 @@
     
                 <ul class="cards element">Картки</ul>
             
-            <a href="./news.html">
+            <a href="../pages/news.html">
                 <ul class="news element">Новини</ul>
             </a>
             <a href="./support.html">
                 <ul class="support element">Підтримка</ul>
             </a>            
-            <a href="../pages/regestration.html">
+            <a href="./regestration.html">
                 <button class="login-btn">Увійти</button>
             </a>
         </nav>
         <div class="mobile-list">
             <nav class="mobile-nav">
-                <a href="../index.html">
+                <a href="./index.html">
                     <ul class="cards mobile-element">Картки</ul>
                 </a>
                 <a href="./news.html">
@@ -97,7 +99,7 @@
                 <a href="./support.html">
                     <ul class="mobile-support mobile-element">Підтримка</ul>
                 </a>            
-                <a href="../pages/regestration.html">
+                <a href="./regestration.html">
                     <button class="login-btn">Увійти</button>
                 </a>
             </nav>
@@ -107,29 +109,85 @@
         <img src="../image/icons8-menu-100.png" alt="Menu" class="img-menu">
     </header>
     <main>
-        <section class="main__section">
-            <div class="main__box-left">
-                <img src="../image/img-news.png" alt="" class="main__img">
+        <section class="card__info">
+            <div class="card__info-left">
+                <h1 class="card__info-title">Дитяча карта</h1>
+                <p class="card__info-text">
+                    Картка для клієнтів від 6 до 14 років. Включає в себе батьківський контроль, а також нову тему застосунку. </p>
             </div>
-            <div class="main__box-rigth">
-                <h1 class="main__title">SmartBank - Новини</h1>
+            <div class="card__info-right">
+                <div class="card">
+                    <div class="card__top">
+                        <img src="../image/chip card.png" alt="" class="card-chip">
+                        <img src="../image/Mastercard Logo.png" alt="" class="card-company">
+                    </div>
+                    <p class="card-number">5168 7450 1832 5050</p>
+                    <div class="card__bottom">
+                        <div class="name__box">
+                            <p class="name__box-title">Card Holder</p>
+                            <p class="name__box-info">FULL NAME</p>
+                        </div>
+                        <div class="expires__box">
+                            <p class="expires__box-title">Expires</p>
+                            <p class="expires__box-dato">09/YY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="../image/heart_eyes.png" alt="" class="emoji heart-eyes">
+            <img src="../image/moneybag.png" alt="" class="emoji moneybag">
+            
+        </section>
+        <section class="card-tariff">
+            <h2 class="card-tariff-title">
+                Тарифи <br>Картки
+            </h2>
+            <div class="card-tariff__block">
+                <div class="card-tariff-box">
+                    <div class="card-tariff__emoji-box">
+                        <img src="../image/moneybag.png" alt="" class="card-tif__emoji">
+                    </div>
+                    <p class="card-tariff-info">Отримуй 5% кешбеку</p>
+                </div>
+                <div class="card-tariff-box">
+                    <div class="card-tariff__emoji-box">
+                        <img src="../image/credit_card.png" alt="" class="card-tif__emoji">
+                    </div>
+                    <p class="card-tariff-info">Безкоштовний випуск</p>
+                </div>
+                <div class="card-tariff-box">
+                    <div class="card-tariff__emoji-box">
+                        <img src="../image/rocket.png" alt="" class="card-tif__emoji">
+                    </div>
+                    <p class="card-tariff-info">Батьківський контроль</p>
+                </div>
             </div>
         </section>
-        <section class="news__section">
-            <div class="news__block">
-                <p class="news__title">Ми відкрилися</p>
-                <p class="news__info">З радістю повідомляємо про відкриття нового банку, який вже готовий надавати свої послуги. Цей інноваційний банк визначається сучасним підходом до фінансових послуг, використовуючи передові технології для забезпечення зручності та безпеки клієнтів. Він пропонує широкий спектр банківських продуктів, включаючи рахунки, кредити та інвестиційні можливості. Новий банк ставить перед собою завдання полегшити фінансові операції та забезпечити високий рівень обслуговування для всіх своїх клієнтів.</p>
-                <p class="news__dato"></p>
+
+        <section class="notcard">
+            <div class="notcard__left">
+                <h2 class="notcard__left-title">Немає карти <br> SmartBank?</h2>
+                <p class="notcard__left-info">Не страшно, її можна отримати просто зараз виконавши пару кроків</p>
+                <button class="notcard__left-btn">Оформити зараз</button>
             </div>
-            <div class="news__block">
-                <p class="news__title">Цифрова Екосистема</p>
-                <p class="news__info">Наш банк створює цифрову екосистему, яка забезпечить зручність для наших клієнтів. Банку дозволяє вам здійснювати операції в реальному часі, контролювати рахунки та отримувати персоналізовані фінансові поради.</p>
-                <p class="news__dato"></p>
-            </div>
-            <div class="news__block">
-                <p class="news__title">Партнерство</p>
-                <p class="news__info">Інноваційний Банк розвиває партнерства з іншими інноваційними компаніями, щоб надати своїм клієнтам унікальні фінансові послуги та переваги. Введено нові програми лояльності, що надають клієнтам можливість отримувати бонуси та знижки за використання банківських послуг.</p>
-                <p class="news__dato"></p>
+            <div class="notcard__right">
+                <div class="card" style="rotate: -16deg;">
+                    <div class="card__top">
+                        <img src="../image/chip card.png" alt="" class="card-chip">
+                        <img src="../image/Mastercard Logo.png" alt="" class="card-company">
+                    </div>
+                    <p class="card-number">5168 7450 1832 5050</p>
+                    <div class="card__bottom">
+                        <div class="name__box">
+                            <p class="name__box-title">Card Holder</p>
+                            <p class="name__box-info">FULL NAME</p>
+                        </div>
+                        <div class="expires__box">
+                            <p class="expires__box-title">Expires</p>
+                            <p class="expires__box-dato">09/YY</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -184,7 +242,7 @@
             </div>
         </footer>
     <script src="../script/load.js"></script>
-    <script src="../script/news.js"></script>
+    <script src="../script/blackcard.js"></script>
     <script src="../script/CardModal.js"></script>
     <script src="../script/multi.js"></script>
 </body>

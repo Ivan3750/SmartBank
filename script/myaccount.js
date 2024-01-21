@@ -298,7 +298,6 @@ cardChoose[2].addEventListener("click", () => {
 
 
 
-
 let userName = document.querySelector('.name__block-txt');
 
 let InputName = sessionStorage.getItem("inputname");
