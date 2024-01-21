@@ -367,6 +367,7 @@ CreateBtn.addEventListener("click", function(){
         company: cardLogoInfo,
         balance: balanceValue, 
         type: cardType }
+       
     sessionStorage.setItem("inputname", InputNameValue)
     sessionStorage.setItem("inputsurname", InputSurnameValue)
     if(myCards == null){

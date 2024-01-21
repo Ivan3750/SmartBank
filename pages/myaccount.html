@@ -45,7 +45,7 @@
     </header>
    
     <main>
-        <section class="section__home active">
+        <section class="section__home">
             <div class="cards__my__cards" id="homebox">
                 <div class="my__cards-top" id="cardsbox">
                    <!--  <div class="my-card card-black">
@@ -87,21 +87,21 @@
                     <div class="exchange-rate-box">
                         <div class="valuta__container">
                             <p class="valuta">$</p>
-                            <p class="kurs">24/08 - 24/09</p>
+                            <p class="kurs">34.23 - 35.79</p>
                         </div>
                         <div class="valuta__container">
-                            <p class="valuta">$</p>
-                            <p class="kurs">24/08 - 24/09</p>
+                            <p class="valuta">€</p>
+                            <p class="kurs">38.54 - 39.15</p>
                         </div>
                         <div class="valuta__container">
-                            <p class="valuta">$</p>
-                            <p class="kurs">24/08 - 24/09</p>
+                            <p class="valuta">£</p>
+                            <p class="kurs">47.15 - 47.62</p>
                         </div>
                         <div class="valuta__container">
-                            <p class="valuta">$</p>
-                            <p class="kurs">24/08 - 24/09</p>
+                            <p class="valuta valuta-name">DKK</p>
+                            <p class="kurs">7.05 - 7.45</p>
                         </div>
-                        <div class="valuta__container">
+                        <div class="valuta__container" id="valuta__more">
                             <p class="valuta">...</p>
                             <p class="kurs">Ще</p>
                         </div>
@@ -402,7 +402,99 @@
             </div>
             
         </section>
-    
+        <section class="section__valuta active">
+            <div class="valuta__block">
+                <div class="valuta__container--main">
+                    <p class="valuta">$</p>
+                    <p class="kurs">34.23 - 35.79</p>
+                </div>
+                <div class="valuta__container--main">
+                    <p class="valuta">€</p>
+                    <p class="kurs">38.54 - 39.15</p>
+                </div>
+                <div class="valuta__container--main">
+                    <p class="valuta">£</p>
+                    <p class="kurs">47.15 - 47.62</p>
+                </div>
+                <div class="valuta__container--main">
+                    <p class="valuta valuta-name">DKK</p>
+                    <p class="kurs">7.05 - 7.45</p>
+                </div>
+                    <div class="valuta__container--main">
+                        <p class="valuta valuta-name">PLN</p>
+                        <p class="kurs">7.97 - 8.33</p>
+                    </div>
+            </div>
+            <div class="valuta__bottom">
+                <div class="valuta__calc">
+                    <h2 class="calc__title">Калькулятор валют</h2>
+                    <div class="calc__func-box">
+                        <div class="calc__container-input">
+                            <div class="calc__input-box">
+                                <select name="" id="from_valuta" class="select__valuta">
+                                    <option value="UAH">UAH</option>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="PLN">PLN</option>
+                                    <option value="GBP">GBP</option>
+                                </select>
+                                <input type="number" min="0" max="1000000" class="input-valuta" id="FromNum"  >
+                            </div>
+                            <div class="calc__input-box">
+                                <select name="" id="to_valuta" class="select__valuta">
+                                    <option value="EUR">EUR</option>
+                                    <option value="USD">USD</option>
+                                    <option value="UAH">UAH</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="PLN">PLN</option>
+                                    <option value="GBP">GBP</option>
+                                </select>
+                                <input type="number" min="0" max="1000000" class="input-valuta" id="ToNum">
+                            </div>
+                        </div>
+                        <div class="calc__change">
+                            <button class="calc__change-btn">
+                                <img src="../image/icons8-refresh-100.png" alt="" class="change-btn-icon"> 
+                            </button>
+                        </div>
+                    </div>
+                    <button class="valuta__btn">Порахувати</button>
+                </div>
+
+                <div class="valuta__action">
+                    <div class="action__box">
+                        <div class="action__start">
+                            <img src="../image/Apple.png" alt="" class="action__logo">
+                             <p class="action__name">Apple</p>
+                        </div>
+                        <p class="action__price">191$</p>
+                    </div>
+                    <div class="action__box">
+                        <div class="action__start">
+                            <img src="../image/tesla.png" alt="" class="action__logo">
+                             <p class="action__name">Tesla</p>
+                        </div>
+                        <p class="action__price">213$</p>
+                    </div>
+                    <div class="action__box">
+                        <div class="action__start">
+                            <img src="../image/amzn.us.png" alt="" class="action__logo">
+                             <p class="action__name">Amazon</p>
+                        </div>
+                        <p class="action__price">155$</p>
+                    </div>
+                    <div class="action__box">
+                        <div class="action__start">
+                            <img src="../image/google.png" alt="" class="action__logo">
+                             <p class="action__name">Google</p>
+                        </div>
+                        <p class="action__price">147$</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="../script/myaccount.js"></script>

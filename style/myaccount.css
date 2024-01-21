@@ -92,6 +92,10 @@ main{
     display: none;
 /*     width: calc(100vw - 140px);
  */}
+.section__valuta {
+    display: none;
+/*     width: calc(100vw - 140px);
+ */}
 
 
 
@@ -123,6 +127,13 @@ main{
 /* /*     min-width: calc(100vw - 260px);
     gap: 25px;
     height: calc(100% - 40px); */
+
+}
+.section__valuta.active {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
 
 }
 
@@ -221,100 +232,6 @@ main{
     cursor: pointer;
 }
 
-/* 
-.home__bottom {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 40px;
-    width: calc( 80vw + 40px);
-    margin: 0px auto;
-    margin-top: 20px;
-    padding: 0px 10px;
-    gap: 20px;
-    
-}
-
-.home__bottom__left {
-    max-width: 500px;
-    min-width: 250px;
-
-}
-
-.home__bottom__right {
-    width: 45%;
-}
-
-
-
-
-
-
-
-.home__bottom {}
-
-.home__bottom__left {}
-
-.tel-box {
-    padding: 50px 30px;
-    border-radius: 50px;
-    background: #141414;
-    width: 100%;
-}
-
-.tel-box-title {
-    color: rgba(255, 255, 255, 0.75);
-    font-family: Lato;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.tel-box-input {
-    margin-top: 30px;
-    display: flex;
-    background: #222;
-    border-radius: 30px;
-    justify-content: space-between;
-}
-
-.tel-input {
-    border-radius: 30px;
-    background: #222;
-    height: 51px;
-    flex-shrink: 0;
-    color: #FFF;
-    font-family: Lato;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    padding-left: 20px;
-    line-height: normal;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-
-
-.tel-pay {
-    color: #FFF;
-    font-family: Lato;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    border-radius: 30px;
-    background: linear-gradient(247deg, #0095FF -10.05%, #10069F 113.72%);
-    width: 130px;
-    height: 50px;
-    flex-shrink: 0;
-    padding: 5px;
-}
-*/
 
 
 .tel-box-title {
@@ -355,24 +272,7 @@ align-items: center;
     margin: 20px 0px;
 }
 
-.home__bottom__right {
 
-}
-/*
-.my__transactions {
-border-radius: 50px;
-background: #141414;
-padding: 40px 50px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-width: 100%;
-
-}
-
-*/
 
 .transaction-info{
     display: flex;
@@ -700,14 +600,8 @@ gap: 10px;
 .credit-box-name {
 }
 
-/* 
-.section__settings {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #cb0a0a;
 
-    
-} */
+
 .settings__left {
     display: flex;
     flex-direction: column;
@@ -1407,10 +1301,114 @@ line-height: normal;
 /* C END */
 
 
+.valuta__block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.valuta-name{
+    font-size: 12px;
+}
+
+
+.valuta__bottom {
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.valuta__calc {
+    border-radius: 41px;
+background: #141414;
+width: 500px;
+padding: 20px;
+}
+.calc__title {
+    color: #FFF;
+font-family: Lato;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center ;
+margin-bottom: 50px;
+}
+.calc__func-box {
+    display: flex;
+}
+.calc__container-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.calc__input-box {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 30px;
+    background: #252525;
+    height: 50px;
+    width: 80%;
+    padding: 0px 10px;
+}
+.input-valuta{
+    background-color: transparent;
+    width: 100%;
+    height: 50%;
+
+}
+
+.select__valuta{
+    border-radius: 30px;
+    background: #171717;
+    height: 80%;
+    width: 100px;
+    text-align: center;
+}
+.calc__change {
+}
+.calc__change-btn {
+    border-radius: 30px;
+background: #252525;
+height: 100%;
+}
+.change-btn-icon {
+    width: 50px;
+    height: 50px;
+}
+.valuta__action {
+}
+
+.valuta__container--main{
+    border-radius: 50px;
+    background: #141414;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 160px;
+    width: 160px;
+    justify-content: center;
+}
 
 
 
+.valuta__btn{
+    margin-top: 20px;
+    border-radius: 20px;
+    background: linear-gradient(266deg, rgba(75, 209, 129, 0.71) 18.06%, rgba(0, 255, 163, 0.71) 110.97%);
+    width: 100%;
+    padding: 15px;
+    color: #FFF;
+font-family: Lato;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 
+}
 
 
 
@@ -1422,8 +1420,47 @@ line-height: normal;
 
 
 
+.valuta__action {
+    padding: 40px 20px;
+    gap: 15px;
+    border-radius: 30px;
+background: #141414;
+width: 450px;
+display: flex;
+flex-direction: column;
+align-items: center
 
 
+}
+.action__box {
+    padding: 10px;
+    display: flex;
+    border-radius: 30px;
+    height: 50px;
+    width: 80%;
+    border-radius: 30px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(0deg, #252525 0%, #252525 100%), linear-gradient(0deg, #252525 0%, #252525 100%), #252525;}
+    
+    
+    .action__start{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+.action__logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.action__name {
+}
+.action__price {
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
@@ -1467,13 +1504,11 @@ line-height: normal;
 
 
 
-
-
-
-
-
-
-
+@media (max-width: 1300.98px){
+    .valuta__calc, .valuta__action{
+        width: 350px;
+    }
+}
 
 
 
@@ -1570,7 +1605,9 @@ line-height: normal;
 .deposit-box, .cashback-box , .credit-box{
     padding: 30px 30px;
 }
-
+.valuta__bottom{
+    padding: 0;
+}
 
     
 }
@@ -1587,9 +1624,19 @@ line-height: normal;
     .cards__setting-text{
         font-size: 16px;
     }
+    .valuta__container--main:nth-child(5){
+        display: none;
+    }
+    .valuta__calc, .valuta__action{
+        width: 300px;
+    }
+   
 }
 
 @media (max-width: 991.98px){
+    .valuta__container--main:nth-child(4){
+        display: none;
+    }
     .home__bottom{
         flex-direction: column;
     }
@@ -1610,6 +1657,15 @@ line-height: normal;
 }
 
 @media (max-width: 950.98px){
+    .valuta__bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .valuta__calc, .valuta__action{
+        width: 70%;
+    }
+
     .function__bottom{
         flex-direction: column;
     }
@@ -1789,48 +1845,7 @@ line-height: normal;
     .valuta__container:nth-child(3){
         display: none;
     }
-    /* .my__card-number{
-        margin-top: 15px;
-        font-size: 11px;
-        letter-spacing: 2.4px;
-    }
-    .my-card, .add__card {
-        width: 200px;
-        height: 125px;
-    }
-
-    .my__card-data{
-        font-size: 11px;
-        margin-top: 15px;
-        margin-left: 30px;
-    }
-    .my-card-type {
-        color: #FFF;
-        font-family: Lato;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: bolder;
-        line-height: normal;
-    }
-    
-    .my__card-company {
-        width: 40px;
-    }
-    
-    .cards__my__cards{
-    
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        border-radius: 40px;
-        background: #141414;
-        padding: 25px;
-        max-width: none;
-        height: 100%;
-        
-    
-}
- */
+   
  .cards__status{
     max-width: none;
     display: flex;
@@ -1899,6 +1914,10 @@ line-height: normal;
     
     .my__transactions{
         width: 350px;
+    }
+    .valuta__container--main{
+        height: 109px;
+    width: 102.85px;
     }
 }
 @media (max-width: 450.98px){
@@ -2357,34 +2376,7 @@ align-items: center;
     .exchange-rate-box{
         display: none;
     }
-/*    .my-card, .add__card{
-    width: 250px;
-    height: 75px;
-    border-radius: 20px;
-    padding: 8px;
-   }
-   .my-card__type{
-    font-size: 12px;
-   }
-   .my__card-company{
-    width: 30px;
-   }
-   .my-card__top{
-    height: 30px;
-   }
-   .my__card-number{
-    margin-top: 10px;
-    color: #FFF;
-    font-family: Lato;
-    font-size: 8px;
-    letter-spacing: 1px;
-   }
-   .my__card-data {
-    font-size: 10px;
-    margin-top: 10px;
-    margin-left: 30px;
-}
- */
+
 .my__cards{
 
     flex-direction: column;
@@ -2440,3 +2432,12 @@ line-height: normal;
 }
 }
 
+@media (max-width: 380.98px){
+    .valuta__container--main{
+        height: auto;
+    width: 65px;
+    }
+    .valuta__bottom{
+        margin-bottom: 100px;
+    }
+}
