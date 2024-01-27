@@ -140,6 +140,7 @@ logoCards.forEach((logoCard) => {
                 case 0:
                     cardLogo.src = "../image/Mastercard Logo.png";
                     cardLogoInfo = "../image/Mastercard Logo.png"
+                    cardLogo.style.height = "60px"
                     break;
                     case 1:
                         cardLogo.src = "../image/VISA-logo.png";
@@ -318,24 +319,25 @@ cardFirst.classList.add("show")
 
 cardContinue.addEventListener("click", function(e){
     e.preventDefault()
-    cardFirst.classList.remove("show")
-        cardSecond.classList.add("show")
-    /* if (InputName.value.length > 3 &&
+
+    if (InputName.value.length > 3 &&
         InputSurname.value.length > 3 &&
         statusValuta == true &&
         statusLogo == true
-         ){
-        
-        InputName.style.border="0px solid red"
-        InputSurname.style.border="0px solid red"
-    } *//* else{
-        InputName.style.border="2px solid red"
-        InputSurname.style.border="2px solid red"
+        ){
+            
+            /* InputName.style.border="0px solid red"
+            InputSurname.style.border="0px solid red" */
+            cardFirst.classList.remove("show")
+                cardSecond.classList.add("show")
+    } else{
+        /* InputName.style.border="2px solid red"
+        InputSurname.style.border="2px solid red" */
         setTimeout(()=>{
-            alert('Заполните все поля')
+            alert('Заповніть всі поля')
 
-    }, 1000) */
-    /* } */
+    }, 1000) 
+     }
 })
 cardBack.addEventListener("click", function(){
     
@@ -386,7 +388,6 @@ CreateBtn.addEventListener("click", function(){
 })
 
 
-/* cardNumber cardExpiresTxt cardLogo cardNew */
 
 
 

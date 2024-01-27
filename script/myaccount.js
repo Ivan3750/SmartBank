@@ -14,110 +14,91 @@ const inputValuta = document.querySelectorAll('.input-valuta');
 const seceltOne = document.getElementById('valuta__one');
 const seceltTwo = document.getElementById('valuta__two');
 
-const UAH = {'EUR': 0.025, 'USD': 0.027, 'DKK': 0.18, 'PLN': 0.12, 'GBP': 0.021};
-const EUR = {'UAH': 39.15, 'USD': 1.09, 'DKK': 7.45, 'PLN': 4.5, 'GBP': 0.87};
-const USD = {'UAH': 35.79, 'EUR': 0.91, 'DKK': 6.81, 'PLN': 3.8, 'GBP': 0.75};
-const DKK = {'UAH': 5.25, 'EUR': 0.13, 'USD': 0.14, 'PLN': 0.22, 'GBP': 0.12};
-const PLN = {'UAH': 8.33, 'EUR': 0.22, 'USD': 0.26, 'DKK': 4.55, 'GBP': 0.22};
-const GBP = {'UAH': 47.62, 'EUR': 1.15, 'USD': 1.33, 'DKK': 8.33, 'PLN': 4.55};
 
 
-let ChangeValuta = document.querySelector(".calc__change-btn");
+let myCards = JSON.parse(sessionStorage.getItem("myCards"));
+let userInfo = JSON.parse(sessionStorage.getItem("UserInfo"));
 
 
-let FromValuta = document.getElementById("from_valuta");
-let ToValuta = document.getElementById("to_valuta");
-let FromNum = document.getElementById("FromNum");
-let ToNum = document.getElementById("ToNum");
-FromNum.value = 0.00
-ToNum.value = 0.00
-ChangeValuta.addEventListener("click", function(){
-    const SaveInfo = [FromValuta.value,ToValuta.value, FromNum.value, ToNum.value]
-    FromValuta.value = SaveInfo[1]
-    ToValuta.value = SaveInfo[0]
-    FromNum.value = SaveInfo[3]
-    ToNum.value = SaveInfo[2]
 
-    
 
-})
+let loadCard = function(cardNumFunc, cardExpFunc,cardComFunc, cardValFunc, cardBGCFunc){
+    if( screen.availWidth > 768){
 
-const convert = document.querySelector('.valuta__btn');
-
-convert.addEventListener("click", function (event) {
-    event.preventDefault();
-    
-    let FromValuta = document.getElementById("from_valuta").value;
-    let ToValuta = document.getElementById("to_valuta").value;
-    let FromNum = document.getElementById("FromNum").value;
-    let ToNum = document.getElementById("ToNum");
-    console.log(FromNum)
-    if ((ToValuta != FromValuta) && (FromNum > 0)){
-        let Result = 0;
-        switch (FromValuta) {
-            case 'UAH':
-                Result = UAH[ToValuta]*FromNum;
-                break;
-            case 'EUR':
-                Result = EUR[ToValuta]*FromNum;
-                break;
-            case 'USD':
-                Result = USD[ToValuta]*FromNum;
-                break;
-            case 'DKK':
-                Result = DKK[ToValuta]*FromNum;
-                break;
-            case 'PLN':
-                Result = PLN[ToValuta]*FromNum;
-                break;
-            case 'GBP':
-                Result = GBP[ToValuta]*FromNum;
-                break;
-            default:
-                console.error("Error");
-                return;
-            }
-            Result = Math.round(Result*100)/100
-            ToNum.value = Result
-            console.log(Result)
-                    
-    }else if((ToValuta == FromValuta) && (FromNum > 0)){
-        alert("Ведіть вірні дані ");
-        
+        for (let a = myCards.length; a != 0; a--) {
+            Cards[0].innerHTML += `<div class="my-card ">
+            <div class="my-card__top">
+            <p class="my-card__type"></p>
+            <img src="" alt="" class="my__card-company">
+            </div>
+            <p class="my__card-number"></p>
+            <p class="my__card-data"></p>
+            </div>`
+        }
+        for (let a = myCards.length; a != 0; a--) {
+            Cards[1].innerHTML += `<div class="my-card card-info">
+            <div class="my-card__top">
+                <p class="my-card__type"></p>
+                <img src="" alt="" class="my__card-company">
+            </div>
+            <p class="my__card-number"></p>
+            <p class="my__card-data"></p>
+        </div>`
+        }
     }else{
-        alert("Ведіть вірне число ");
-
+        Cards[0].innerHTML = `<div class="my-card ">
+    <div class="my-card__top">
+    <p class="my-card__type"></p>
+    <img src="" alt="" class="my__card-company">
+    </div>
+    <p class="my__card-number" id = "test"></p>
+    <p class="my__card-data"></p>
+    </div>`
+        Cards[1].innerHTML = `<div class="my-card ">
+    <div class="my-card__top">
+    <p class="my-card__type"></p>
+    <img src="" alt="" class="my__card-company">
+    </div>
+    <p class="my__card-number"></p>
+    <p class="my__card-data"></p>
+    </div>`
     }
-                    
-});
+const cardNumber = document.querySelectorAll('.my__card-number');
+const cardExpires = document.querySelectorAll('.my__card-data');
+const myCard = document.querySelectorAll('.my-card');
+const cardCompany = document.querySelectorAll('.my__card-company');
+const cardValuta = document.querySelectorAll('.my-card__type');
+
+cardNumber[0].innerHTML = cardNumFunc;
+cardExpires[0].innerHTML = cardExpFunc
+cardCompany[0].src = cardComFunc
+cardValuta[0].innerHTML = cardValFunc
+myCard[0].style.backgroundColor = cardBGCFunc
+cardNumber[1].innerHTML = cardNumFunc;
+cardExpires[1].innerHTML = cardExpFunc
+cardCompany[1].src = cardComFunc
+cardValuta[1].innerHTML = cardValFunc
+myCard[1].style.backgroundColor = cardBGCFunc
+}
 
 
 
+    console.log(myCards.length)
+    const cardsMenu = document.querySelectorAll('.my__cards-menu');
+    console.log(cardsMenu)
+    if(myCards.length != 3){
+        for(let i = myCards.length+1; i != 0; i--){
+            cardsMenu[0].innerHTML += `<div class="card-choose"></div>`
+            cardsMenu[1].innerHTML += `<div class="card-choose--info"></div>`
+        }
 
+    }else{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for(let i = myCards.length; i != 0; i--){
+            cardsMenu[0].innerHTML = `<div class="card-choose"></div>`
+            cardsMenu[1].innerHTML = `<div class="card-choose--info"></div>`
+        }
+    }
 
 
 
@@ -265,34 +246,120 @@ langEN.addEventListener("click", () => {
 
 
 
-
 const cardChoose = document.querySelectorAll('.card-choose');
+const cardChooseInfo = document.querySelectorAll('.card-choose--info');
 const Cards = document.querySelectorAll('.my__cards-top');
 
 cardChoose[0].addEventListener("click", () => {
-
-    Cards.style.marginLeft = "80px"
+    loadCard(myCards[0].number, myCards[0].expires, myCards[0].company, myCards[0].valuta, myCards[0].background)
     cardChoose[0].style.backgroundColor = "#797979"
     cardChoose[1].style.backgroundColor = "#494949"
     cardChoose[2].style.backgroundColor = "#494949"
-
+    cardChooseInfo[0].style.backgroundColor = "#797979"
+    cardChooseInfo[1].style.backgroundColor = "#494949"
+    cardChooseInfo[2].style.backgroundColor = "#494949"
+    
 })
 cardChoose[1].addEventListener("click", () => {
+    
+    loadCard()
+    if(myCards[1] != undefined){
+        loadCard(myCards[1].number, myCards[1].expires, myCards[1].company, myCards[1].valuta, myCards[1].background)
+        
+    }else{
+        Cards[0].innerHTML = `<div class="add__card">
+        <span>+</span>
+    </div>`
+        Cards[1].innerHTML = `<div class="add__card">
+        <span>+</span>
+        </div>`
+    }
+    cardChoose[1].style.backgroundColor = "#797979"
+    cardChoose[0].style.backgroundColor = "#494949"
+    cardChoose[2].style.backgroundColor = "#494949"
+    cardChooseInfo[1].style.backgroundColor = "#797979"
+    cardChooseInfo[0].style.backgroundColor = "#494949"
+    cardChooseInfo[2].style.backgroundColor = "#494949"
 
-    Cards.style.marginLeft = "-480px"
+})
+cardChoose[2].addEventListener("click", () => {
+    loadCard()
+    if(myCards[2] != undefined){
+        loadCard(myCards[2].number, myCards[2].expires, myCards[2].company, myCards[2].valuta, myCards[2].background)
+        
+    }else{
+        Cards[0].innerHTML = `<div class="add__card">
+    <span>+</span>
+    </div>`
+        Cards[1].innerHTML = `<div class="add__card">
+    <span>+</span>
+    </div>`
+    }
+    cardChoose[2].style.backgroundColor = "#797979"
+    cardChoose[0].style.backgroundColor = "#494949"
+    cardChoose[1].style.backgroundColor = "#494949"
+    cardChooseInfo[2].style.backgroundColor = "#797979"
+    cardChooseInfo[0].style.backgroundColor = "#494949"
+    cardChooseInfo[1].style.backgroundColor = "#494949"
+
+
+})
+cardChooseInfo[0].addEventListener("click", () => {
+    loadCard(myCards[0].number, myCards[0].expires, myCards[0].company, myCards[0].valuta, myCards[0].background)
+    cardChooseInfo[0].style.backgroundColor = "#797979"
+    cardChooseInfo[1].style.backgroundColor = "#494949"
+    cardChooseInfo[2].style.backgroundColor = "#494949"
+    cardChoose[0].style.backgroundColor = "#797979"
+    cardChoose[1].style.backgroundColor = "#494949"
+    cardChoose[2].style.backgroundColor = "#494949"
+    
+})
+cardChooseInfo[1].addEventListener("click", () => {
+    
+    loadCard()
+    if(myCards[1] != undefined){
+        loadCard(myCards[1].number, myCards[1].expires, myCards[1].company, myCards[1].valuta, myCards[1].background)
+        
+    }else{
+        Cards[0].innerHTML = `<div class="add__card">
+        <span>+</span>
+    </div>`
+        Cards[1].innerHTML = `<div class="add__card">
+        <span>+</span>
+        </div>`
+    }
+    cardChooseInfo[1].style.backgroundColor = "#797979"
+    cardChooseInfo[0].style.backgroundColor = "#494949"
+    cardChooseInfo[2].style.backgroundColor = "#494949"
     cardChoose[1].style.backgroundColor = "#797979"
     cardChoose[0].style.backgroundColor = "#494949"
     cardChoose[2].style.backgroundColor = "#494949"
 
 })
-cardChoose[2].addEventListener("click", () => {
+cardChooseInfo[2].addEventListener("click", () => {
+    loadCard()
+    if(myCards[2] != undefined){
+        loadCard(myCards[2].number, myCards[2].expires, myCards[2].company, myCards[2].valuta, myCards[2].background)
+        
+    }else{
+        Cards[0].innerHTML = `<div class="add__card">
+    <span>+</span>
+    </div>`
+        Cards[1].innerHTML = `<div class="add__card">
+    <span>+</span>
+    </div>`
+    }
+    cardChooseInfo[2].style.backgroundColor = "#797979"
+    cardChooseInfo[0].style.backgroundColor = "#494949"
+    cardChooseInfo[1].style.backgroundColor = "#494949"
     cardChoose[2].style.backgroundColor = "#797979"
     cardChoose[0].style.backgroundColor = "#494949"
     cardChoose[1].style.backgroundColor = "#494949"
 
-    Cards.style.marginLeft = "-1000px"
 
 })
+
+
 
 
 
@@ -306,40 +373,46 @@ let InputSurname = sessionStorage.getItem("inputsurname");
 
 
 
-let myCards = JSON.parse(sessionStorage.getItem("myCards"));
-let userInfo = JSON.parse(sessionStorage.getItem("UserInfo"));
+
 
 
 console.log(myCards)
 
 userName.textContent = InputName + " " + InputSurname
 
+if( screen.availWidth > 768){
 
-for (let a = myCards.length; a != 0; a--) {
-    Cards[0].innerHTML += `<div class="my-card ">
-    <div class="my-card__top">
-    <p class="my-card__type"></p>
-    <img src="" alt="" class="my__card-company">
-    </div>
-    <p class="my__card-number"></p>
-    <p class="my__card-data"></p>
+    for (let a = myCards.length; a != 0; a--) {
+        Cards[0].innerHTML += `<div class="my-card ">
+        <div class="my-card__top">
+        <p class="my-card__type"></p>
+        <img src="" alt="" class="my__card-company">
+        </div>
+        <p class="my__card-number"></p>
+        <p class="my__card-data"></p>
+        </div>`
+    }
+    for (let a = myCards.length; a != 0; a--) {
+        Cards[1].innerHTML += `<div class="my-card card-info">
+        <div class="my-card__top">
+            <p class="my-card__type"></p>
+            <img src="" alt="" class="my__card-company">
+        </div>
+        <p class="my__card-number"></p>
+        <p class="my__card-data"></p>
     </div>`
-}
-for (let a = myCards.length; a != 0; a--) {
-    Cards[1].innerHTML += `<div class="my-card card-info">
-    <div class="my-card__top">
-        <p class="my-card__type">UAH</p>
-        <img src="../image/VISA-logo.png" alt="" class="my__card-company">
-    </div>
-    <p class="my__card-number"></p>
-    <p class="my__card-data"></p>
-</div>`
+    }
+}else{
+    loadCard(myCards[0].number, myCards[0].expires, myCards[0].company, myCards[0].valuta, myCards[0].background)
+
 }
 const cardNumber = document.querySelectorAll('.my__card-number');
 const cardExpires = document.querySelectorAll('.my__card-data');
 const myCard = document.querySelectorAll('.my-card');
 const cardCompany = document.querySelectorAll('.my__card-company');
 const cardValuta = document.querySelectorAll('.my-card__type');
+
+
 for (let i = 0; i != myCards.length; i++) {
     cardNumber[i].innerHTML = myCards[i].number;
     cardExpires[i].innerHTML = myCards[i].expires
@@ -404,33 +477,43 @@ cardInfo[0].addEventListener("click", function () {
     cardTypeTxt.innerHTML = myCards[0].type
     ActiveCard = 0 
 })
-cardInfo[1].addEventListener("click", function () {
-    cardBalanceTxt.innerHTML = `${myCards[1].balance}${myCards[1].valuta}`
-    cardTypeTxt.innerHTML = myCards[1].type
-    ActiveCard = 1 
 
-})
-/* cardInfo[2].addEventListener("click", function () {
-    cardBalanceTxt.innerHTML = `${myCards[2].balance}${myCards[2].valuta}`
-    cardTypeTxt.innerHTML = myCards[2].type
-    ActiveCard = 2
-})
+if(cardInfo[1] != undefined){
+    cardInfo[1].addEventListener("click", function () {
+        cardBalanceTxt.innerHTML = `${myCards[1].balance}${myCards[1].valuta}`
+        cardTypeTxt.innerHTML = myCards[1].type
+        ActiveCard = 1 
+    
+    })
 
- */
+}
+if(cardInfo[2] != undefined){
+    cardInfo[2].addEventListener("click", function () {
+        cardBalanceTxt.innerHTML = `${myCards[2].balance}${myCards[2].valuta}`
+        cardTypeTxt.innerHTML = myCards[2].type
+        ActiveCard = 2
+    })
+
+}
+
+
 
 
 const userTel = document.querySelector('.tel__block-number');
 const userEmail = document.querySelector('.email__block-number');
 const userPassword = document.querySelector('.password__block-txt');
-userTel.innerHTML = userInfo.PhoneNumber
-userEmail.innerHTML = userInfo.Email
+if(userInfo != undefined){
+    userTel.innerHTML = userInfo.PhoneNumber
+    userEmail.innerHTML = userInfo.Email
+    let HidePassword = ""
+    for(p = userInfo.Password.length; p != 0; p--){
+         HidePassword += "." 
+    }
+    userPassword.innerHTML = HidePassword
 
-
-let HidePassword = ""
-for(p = userInfo.Password.length; p != 0; p--){
-     HidePassword += "." 
 }
-userPassword.innerHTML = HidePassword
+
+
 
 
 blockCard.addEventListener("click", (e) => {
@@ -444,7 +527,6 @@ blockCard.addEventListener("click", (e) => {
 
 
 })
-
 
 
 

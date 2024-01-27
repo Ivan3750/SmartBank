@@ -422,7 +422,8 @@ margin-bottom: 20px;
 
 .my__cards-top{
     display: flex;
-/*     flex-direction: column;
+/*     width: 420px;
+ *//*     flex-direction: column;
  */}
 .my__cards-menu{
     display: flex;
@@ -1729,6 +1730,7 @@ align-items: center
         display: flex;
         flex-direction: row!important;
         gap: 15px;
+        justify-content: center;
     }
     .section__cards.active{
         width: 100vw;
@@ -1750,6 +1752,14 @@ align-items: center
     }
     
     .card-choose{
+        margin: 5px auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #797979;
+        background-color: #494949;
+    }
+    .card-choose--info{
         margin: 5px auto;
         width: 20px;
         height: 20px;
@@ -1784,7 +1794,6 @@ align-items: center
 
     .my__cards-top{
         gap: 90px;
-        margin-left: 100px;
     }
 
 
@@ -1881,7 +1890,7 @@ align-items: center
  }
  .my__card-company{
     width: auto;
-    height: 70px;
+    height: 50px;
  }
 .function__top{
     flex-direction: column;
@@ -1892,6 +1901,7 @@ align-items: center
 }
 #homebox{
     height: 100%!important;
+    overflow: hidden;
 }
 
 }

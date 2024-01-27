@@ -48,7 +48,6 @@ body{
 display: flex;
 justify-content: space-around;
 padding: 50px;
-max-height: 95vh;
 gap: 10px;
 }
 
@@ -301,6 +300,12 @@ line-height: normal;
     line-height: normal;
 
 }
+
+@media (min-width: 1100px){
+    .support__block{
+        height: 100%;
+    }
+ }
 
 @media (max-width: 1199.98px){
     .support__block{

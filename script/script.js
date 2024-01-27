@@ -46,13 +46,13 @@ modalClose.addEventListener("click", function(event){
 
 
 
-const firstDato = new Date('2023-12-20T18:32:00')
+const firstDato = new Date('2024-01-24T00:00:00')
 
 const dashboardNumber = document.querySelectorAll(".dashboard__box-number")
-let usersDashboard = 8244750
-let purchasesDashboard = 7648540329
-let spentDashboard = 4573671358867
-let cashbackDashboard = 7340954378
+let usersDashboard = 8044750
+let purchasesDashboard = 7148540329
+let spentDashboard = 3973671358867
+let cashbackDashboard = 6840954378
 let onlineNumber = 0;
 let todayDato = new Date();
 let infoDato = Math.floor((todayDato - firstDato)/1000) 
@@ -108,7 +108,7 @@ function CheckUserDashboard(){
 }
 function CheckpurchasesDashboard(){
     CheckTime(1, purchasesDashboard, 1, 1)
-    setTimeout(CheckpurchasesDashboard,0.0001)  
+    setTimeout(CheckpurchasesDashboard,0.001)  
     
 }
 function CheckspentDashboard(){
@@ -189,3 +189,26 @@ if(this.scrollY > 2900){
 
 const cardsBox = document.querySelector('.info__cards');
 
+
+
+
+
+let mediaScreens = window.matchMedia("(max-width: 700px)")
+const logoMain = document.querySelector('.logo');
+
+
+function Screen(){
+    if (mediaScreens.matches) {
+        logoMain.src = "./image/favicon.png" 
+    } else {
+        logoMain.src = "./image/logo.png" 
+
+    }
+}
+
+mediaScreens.addEventListener("change", function(){
+    Screen()
+    
+    
+})
+Screen()
