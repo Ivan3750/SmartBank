@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style/multi.css">
     <link rel="stylesheet" href="../style/load.css">
     <link rel="shortcut icon" href="../image/favicon.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Підтримка</title>
 </head>
 <body class="body">
@@ -16,7 +17,7 @@
             <img src="../image/close-100.png" alt="" class="modal-btn">
             <h2 class="modal__cards-title">Обирай потрібну карту</h2>
             <div class="modal__block">
-                <a href="./pages/blackcard.html">
+                <a href="../pages/blackcard.html">
                 <div class="modal__cards-box">
                     <div class="modal-card card-black">
                         <div class="modal-card__top">
@@ -30,7 +31,7 @@
                     <p class="modal__card-info">Престижна картка підкреслює статус власника. Це найвищий рівень турботи, безпеки і конфіденційності. </p>
                 </div>
                 </a>
-                <a href="./pages/pinkcard.html">
+                <a href="../pages/pinkcard.html">
                 <div class="modal__cards-box">
                     <div class="modal-card card-pink">
                         <div class="modal-card__top">
@@ -44,7 +45,7 @@
                     <p class="modal__card-info">Картка для клієнтів від 6 до 14 років. Включає в себе батьківський контроль, а також цікаві можливості. </p>
                 </div>
                 </a>
-                <a href="./pages/whitecard.html">
+                <a href="../pages/whitecard.html">
                 <div class="modal__cards-box">
                     <div class="modal-card card-white">
                         <div class="modal-card__top">
@@ -113,7 +114,7 @@
                 <h1 class="info__box-title">SmartBank підтримка <br>
                     допоможе кожному</h1>
             </div>
-            <div class="info__box-right">
+            <div class="info__box-right" data-aos="zoom-out">
                 <img src="../image/support-img.png" alt="" class="info__box-img">
             </div>
         </section>
@@ -211,5 +212,10 @@
     <script src="../script/load.js"></script>
     <script src="../script/support.js"></script>
     <script src="../script/CardModal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
 </body>
 </html>

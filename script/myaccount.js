@@ -22,9 +22,8 @@ let userInfo = JSON.parse(sessionStorage.getItem("UserInfo"));
 
 
 
-let loadCard = function(cardNumFunc, cardExpFunc,cardComFunc, cardValFunc, cardBGCFunc){
+let loadCard = function(cardNumFunc, cardExpFunc,cardComFunc, cardValFunc, cardBGCFunc,cardBGIFunc){
     if( screen.availWidth > 768){
-
         for (let a = myCards.length; a != 0; a--) {
             Cards[0].innerHTML += `<div class="my-card ">
             <div class="my-card__top">
@@ -74,32 +73,28 @@ cardExpires[0].innerHTML = cardExpFunc
 cardCompany[0].src = cardComFunc
 cardValuta[0].innerHTML = cardValFunc
 myCard[0].style.backgroundColor = cardBGCFunc
+myCard[0].style.backgroundImage = cardBGIFunc
 cardNumber[1].innerHTML = cardNumFunc;
 cardExpires[1].innerHTML = cardExpFunc
 cardCompany[1].src = cardComFunc
 cardValuta[1].innerHTML = cardValFunc
 myCard[1].style.backgroundColor = cardBGCFunc
+myCard[1].style.backgroundImage = cardBGIFunc
 }
 
 
+let IndexMenu = 1
 
-    console.log(myCards.length)
     const cardsMenu = document.querySelectorAll('.my__cards-menu');
     console.log(cardsMenu)
-    if(myCards.length != 3){
-        for(let i = myCards.length+1; i != 0; i--){
-            cardsMenu[0].innerHTML += `<div class="card-choose"></div>`
-            cardsMenu[1].innerHTML += `<div class="card-choose--info"></div>`
-        }
-
-    }else{
-
-        for(let i = myCards.length; i != 0; i--){
-            cardsMenu[0].innerHTML = `<div class="card-choose"></div>`
-            cardsMenu[1].innerHTML = `<div class="card-choose--info"></div>`
-        }
+    if(myCards.length == 3){
+        IndexMenu = 0
     }
-
+    for(let i = myCards.length+IndexMenu; i != 0; i--){
+        cardsMenu[0].innerHTML += `<div class="card-choose"></div>`
+        cardsMenu[1].innerHTML += `<div class="card-choose--info"></div>`
+    }
+    
 
 
 menuElements.forEach((elements, index) => {
@@ -200,48 +195,8 @@ valutaBTN.addEventListener("click", ()=>{
 
 
 
-const themeDark = document.querySelector('.theme-dark');
-const themeLight = document.querySelector('.theme-light');
-const themeChoose = document.querySelector('.theme-choose');
 
 
-
-
-themeDark.addEventListener("click", () => {
-
-
-    themeChoose.classList.remove("light")
-    themeChoose.classList.add("dark")
-
-})
-themeLight.addEventListener("click", () => {
-
-    themeChoose.classList.remove("dark")
-    themeChoose.classList.add("light")
-})
-
-
-
-const langUA = document.querySelector('.language-ukrainian');
-const langEN = document.querySelector('.language-english');
-const langChoose = document.querySelector('.language-choose');
-
-
-
-langUA.addEventListener("click", () => {
-
-    langChoose.classList.remove("EN")
-    langChoose.classList.add("UA")
-
-
-})
-langEN.addEventListener("click", () => {
-
-    langChoose.classList.remove("UA")
-    langChoose.classList.add("EN")
-
-
-})
 
 
 
@@ -250,135 +205,9 @@ const cardChoose = document.querySelectorAll('.card-choose');
 const cardChooseInfo = document.querySelectorAll('.card-choose--info');
 const Cards = document.querySelectorAll('.my__cards-top');
 
-cardChoose[0].addEventListener("click", () => {
-    loadCard(myCards[0].number, myCards[0].expires, myCards[0].company, myCards[0].valuta, myCards[0].background)
-    cardChoose[0].style.backgroundColor = "#797979"
-    cardChoose[1].style.backgroundColor = "#494949"
-    cardChoose[2].style.backgroundColor = "#494949"
-    cardChooseInfo[0].style.backgroundColor = "#797979"
-    cardChooseInfo[1].style.backgroundColor = "#494949"
-    cardChooseInfo[2].style.backgroundColor = "#494949"
-    
-})
-cardChoose[1].addEventListener("click", () => {
-    
-    loadCard()
-    if(myCards[1] != undefined){
-        loadCard(myCards[1].number, myCards[1].expires, myCards[1].company, myCards[1].valuta, myCards[1].background)
-        
-    }else{
-        Cards[0].innerHTML = `<div class="add__card">
-        <span>+</span>
-    </div>`
-        Cards[1].innerHTML = `<div class="add__card">
-        <span>+</span>
-        </div>`
-    }
-    cardChoose[1].style.backgroundColor = "#797979"
-    cardChoose[0].style.backgroundColor = "#494949"
-    cardChoose[2].style.backgroundColor = "#494949"
-    cardChooseInfo[1].style.backgroundColor = "#797979"
-    cardChooseInfo[0].style.backgroundColor = "#494949"
-    cardChooseInfo[2].style.backgroundColor = "#494949"
-
-})
-cardChoose[2].addEventListener("click", () => {
-    loadCard()
-    if(myCards[2] != undefined){
-        loadCard(myCards[2].number, myCards[2].expires, myCards[2].company, myCards[2].valuta, myCards[2].background)
-        
-    }else{
-        Cards[0].innerHTML = `<div class="add__card">
-    <span>+</span>
-    </div>`
-        Cards[1].innerHTML = `<div class="add__card">
-    <span>+</span>
-    </div>`
-    }
-    cardChoose[2].style.backgroundColor = "#797979"
-    cardChoose[0].style.backgroundColor = "#494949"
-    cardChoose[1].style.backgroundColor = "#494949"
-    cardChooseInfo[2].style.backgroundColor = "#797979"
-    cardChooseInfo[0].style.backgroundColor = "#494949"
-    cardChooseInfo[1].style.backgroundColor = "#494949"
-
-
-})
-cardChooseInfo[0].addEventListener("click", () => {
-    loadCard(myCards[0].number, myCards[0].expires, myCards[0].company, myCards[0].valuta, myCards[0].background)
-    cardChooseInfo[0].style.backgroundColor = "#797979"
-    cardChooseInfo[1].style.backgroundColor = "#494949"
-    cardChooseInfo[2].style.backgroundColor = "#494949"
-    cardChoose[0].style.backgroundColor = "#797979"
-    cardChoose[1].style.backgroundColor = "#494949"
-    cardChoose[2].style.backgroundColor = "#494949"
-    
-})
-cardChooseInfo[1].addEventListener("click", () => {
-    
-    loadCard()
-    if(myCards[1] != undefined){
-        loadCard(myCards[1].number, myCards[1].expires, myCards[1].company, myCards[1].valuta, myCards[1].background)
-        
-    }else{
-        Cards[0].innerHTML = `<div class="add__card">
-        <span>+</span>
-    </div>`
-        Cards[1].innerHTML = `<div class="add__card">
-        <span>+</span>
-        </div>`
-    }
-    cardChooseInfo[1].style.backgroundColor = "#797979"
-    cardChooseInfo[0].style.backgroundColor = "#494949"
-    cardChooseInfo[2].style.backgroundColor = "#494949"
-    cardChoose[1].style.backgroundColor = "#797979"
-    cardChoose[0].style.backgroundColor = "#494949"
-    cardChoose[2].style.backgroundColor = "#494949"
-
-})
-cardChooseInfo[2].addEventListener("click", () => {
-    loadCard()
-    if(myCards[2] != undefined){
-        loadCard(myCards[2].number, myCards[2].expires, myCards[2].company, myCards[2].valuta, myCards[2].background)
-        
-    }else{
-        Cards[0].innerHTML = `<div class="add__card">
-    <span>+</span>
-    </div>`
-        Cards[1].innerHTML = `<div class="add__card">
-    <span>+</span>
-    </div>`
-    }
-    cardChooseInfo[2].style.backgroundColor = "#797979"
-    cardChooseInfo[0].style.backgroundColor = "#494949"
-    cardChooseInfo[1].style.backgroundColor = "#494949"
-    cardChoose[2].style.backgroundColor = "#797979"
-    cardChoose[0].style.backgroundColor = "#494949"
-    cardChoose[1].style.backgroundColor = "#494949"
-
-
-})
 
 
 
-
-
-
-
-let userName = document.querySelector('.name__block-txt');
-
-let InputName = sessionStorage.getItem("inputname");
-let InputSurname = sessionStorage.getItem("inputsurname");
-
-
-
-
-
-
-
-console.log(myCards)
-
-userName.textContent = InputName + " " + InputSurname
 
 if( screen.availWidth > 768){
 
@@ -406,6 +235,24 @@ if( screen.availWidth > 768){
     loadCard(myCards[0].number, myCards[0].expires, myCards[0].company, myCards[0].valuta, myCards[0].background)
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const cardNumber = document.querySelectorAll('.my__card-number');
 const cardExpires = document.querySelectorAll('.my__card-data');
 const myCard = document.querySelectorAll('.my-card');
@@ -419,6 +266,7 @@ for (let i = 0; i != myCards.length; i++) {
     cardCompany[i].src = myCards[i].company
     cardValuta[i].innerHTML = myCards[i].valuta
     myCard[i].style.backgroundColor = myCards[i].background
+    myCard[i].style.backgroundImage = myCards[i].backgroundURL
 }
 let Index = Math.round(myCard.length / 2)
 if(Index === 0){
@@ -430,6 +278,7 @@ for (let i = Index; i != myCards.length + Index; i++) {
     cardCompany[i].src = myCards[i - Index].company
     cardValuta[i].innerHTML = myCards[i - Index].valuta
     myCard[i].style.backgroundColor = myCards[i - Index].background
+    myCard[i].style.backgroundImage = myCards[i - Index].backgroundURL
 }
 
 
@@ -457,6 +306,31 @@ addCard.addEventListener("click", ()=>{
 
 
 sessionStorage.setItem("myCards", JSON.stringify(myCards))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -499,34 +373,9 @@ if(cardInfo[2] != undefined){
 
 
 
-const userTel = document.querySelector('.tel__block-number');
-const userEmail = document.querySelector('.email__block-number');
-const userPassword = document.querySelector('.password__block-txt');
-if(userInfo != undefined){
-    userTel.innerHTML = userInfo.PhoneNumber
-    userEmail.innerHTML = userInfo.Email
-    let HidePassword = ""
-    for(p = userInfo.Password.length; p != 0; p--){
-         HidePassword += "." 
-    }
-    userPassword.innerHTML = HidePassword
-
-}
 
 
 
-
-blockCard.addEventListener("click", (e) => {
-    e.preventDefault()
-    console.log(myCards.splice(0, 1))
-    myCards.splice(0, 1);
-    
-    sessionStorage.setItem("myCards", JSON.stringify(myCards));
-
-    console.log(myCards)
-
-
-})
 
 
 

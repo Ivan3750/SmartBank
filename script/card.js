@@ -29,29 +29,38 @@ let ValutaInfo = ""
 
 let statusValuta = false
 valutaCard[0].addEventListener("click", function(){
-    valutaCard[0].style.border = "2px solid blue"
-    valutaCard[1].style.border = "0"
-    valutaCard[2].style.border = "0"
-    ValutaInfo = "USD"
-    statusValuta = true    
+    if(ValutaInfo != "COIN"){
+
+        valutaCard[0].style.border = "2px solid blue"
+        valutaCard[1].style.border = "0"
+        valutaCard[2].style.border = "0"
+        ValutaInfo = "USD"
+        statusValuta = true    
+    }
 })
 
 valutaCard[1].addEventListener("click", function(){
-    valutaCard[1].style.border = "2px solid blue"
-    valutaCard[0].style.border = "0"
-    valutaCard[2].style.border = "0"
-    ValutaInfo = "UAH"
-    statusValuta = true    
+    if(ValutaInfo != "COIN"){
+        
+        valutaCard[1].style.border = "2px solid blue"
+        valutaCard[0].style.border = "0"
+        valutaCard[2].style.border = "0"
+        ValutaInfo = "UAH"
+        statusValuta = true    
+    }
     
 })
 
 valutaCard[2].addEventListener("click", function(){
-    valutaCard[2].style.border = "2px solid blue"
-    valutaCard[1].style.border = "0"
-    valutaCard[0].style.border = "0"
-    ValutaInfo = "EUR"
-    statusValuta = true    
-    
+    if(ValutaInfo != "COIN"){
+        
+        valutaCard[2].style.border = "2px solid blue"
+        valutaCard[1].style.border = "0"
+        valutaCard[0].style.border = "0"
+        ValutaInfo = "EUR"
+        statusValuta = true    
+        
+    }
 })
 let cardNumberInfo = ""
 let cardExpiresInfo = ""
@@ -69,11 +78,6 @@ CreateBtn.addEventListener("click", function(event){
         CVV.innerHTML = randCVV
         cardExpiresTxt.innerHTML = currentDate.getMonth() + 1 + "/" + (Number(currentDate.getFullYear()) - 1995)
         cardExpiresInfo = currentDate.getMonth() + 1 + "/" + (Number(currentDate.getFullYear()) - 1995)
-        if (InputName.value.length === 0 && InputSurname.value.length === 0 ) {
-            cardName.innerHTML = "Smart Bank"
-        }else{
-
-        }
    
     
     
@@ -142,15 +146,15 @@ logoCards.forEach((logoCard) => {
                     cardLogoInfo = "../image/Mastercard Logo.png"
                     cardLogo.style.height = "60px"
                     break;
-                    case 1:
-                        cardLogo.src = "../image/VISA-logo.png";
-                        cardLogoInfo = "../image/VISA-logo.png"
-                        cardLogo.style.height = "75px"
-                        break;
-                        case 2:
-                            cardLogo.src = "../image/bitcoin.png";
-                            cardLogoInfo = "../image/bitcoin.png"
-                            ValutaInfo = "COIN"
+                case 1:
+                    cardLogo.src = "../image/VISA-logo.png";
+                    cardLogoInfo = "../image/VISA-logo.png"
+                    cardLogo.style.height = "75px"
+                    break;
+                case 2:
+                    cardLogo.src = "../image/bitcoin.png";
+                    cardLogoInfo = "../image/bitcoin.png"
+                    ValutaInfo = "COIN"
                     cardLogo.style.height = "25px"
                     valutaCard[2].style.border = "0"
                     valutaCard[1].style.border = "0"
@@ -182,7 +186,7 @@ colorChoose.forEach((color, index) => {
                 changeColorCard("white")
                 break;
             case 1:
-                cardNew.style.backgroundColor = "white"
+                cardNew.style.backgroundColor = "#838383"
                 changeColorCard("black")
                 break;
             case 2:
@@ -207,7 +211,6 @@ imgChoose.forEach((img, index) => {
                 cardNew.classList.add("img")
                 cardNew.style.background = "url('../image/background-card-1.png')";
                 changeColorCard("white")
-                
                 break;
             case 1:
                     cardNew.classList.add("img")
@@ -358,13 +361,25 @@ let myCards = JSON.parse(sessionStorage.getItem("myCards"));
 
 
 balanceValue = "0.00";
+let isRemoveCard = false
 CreateBtn.addEventListener("click", function(){
     let InputNameValue = InputName.value
     let InputSurnameValue = InputSurname.value
     backgroundCard = cardNew.style.backgroundColor 
+    backgroundImageInfo = cardNew.style.backgroundImage
+    if(myCards != undefined){
+
+        if(myCards.length >= 3){
+            isRemoveCard = confirm("Ви не можете мати більше 3 карток.Ви можете їх видалити ви згідні?" )
+        }
+        if(isRemoveCard === true){
+            myCards = []
+        }
+    } 
     card = {number: cardNumberInfo,
         expires: cardExpiresInfo, 
-        background: backgroundCard, 
+        background: backgroundCard,
+        backgroundURL:  backgroundImageInfo,
         valuta: ValutaInfo, 
         company: cardLogoInfo,
         balance: balanceValue, 

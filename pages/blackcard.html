@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style/CardModal.css">
     <link rel="stylesheet" href="../style/load.css">
     <link rel="stylesheet" href="../style/multi.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../image/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
@@ -115,22 +116,25 @@
                 <p class="card__info-text">Престижна картка підкреслює статус власника. Це найвищий рівень турботи, безпеки і конфіденційності. </p>
             </div>
             <div class="card__info-right">
-                <div class="card">
-                    <div class="card__top">
-                        <img src="../image/chip card.png" alt="" class="card-chip">
-                        <img src="../image/Mastercard Logo.png" alt="" class="card-company">
-                    </div>
-                    <p class="card-number">5168 7450 1832 5050</p>
-                    <div class="card__bottom">
-                        <div class="name__box">
-                            <p class="name__box-title">Card Holder</p>
-                            <p class="name__box-info">FULL NAME</p>
+                <div  data-aos="zoom-out">
+                    <div class="card" >
+                        <div class="card__top">
+                            <img src="../image/chip card.png" alt="" class="card-chip">
+                            <img src="../image/Mastercard Logo.png" alt="" class="card-company">
                         </div>
-                        <div class="expires__box">
-                            <p class="expires__box-title">Expires</p>
-                            <p class="expires__box-dato">09/YY</p>
+                        <p class="card-number">5168 7450 1832 5050</p>
+                        <div class="card__bottom">
+                            <div class="name__box">
+                                <p class="name__box-title">Card Holder</p>
+                                <p class="name__box-info">FULL NAME</p>
+                            </div>
+                            <div class="expires__box">
+                                <p class="expires__box-title">Expires</p>
+                                <p class="expires__box-dato">09/YY</p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <img src="../image/heart_eyes.png" alt="" class="emoji heart-eyes">
@@ -162,7 +166,7 @@
                 </div>
             </div>
         </section>
-        <section class="credit-calc">
+        <section class="credit-calc" style="display: none;">
             <div class="calc">
                 <h2 class="calc-title">
                     Кредитний <br> калькулятор
@@ -303,5 +307,9 @@
     <script src="../script/blackcard.js"></script>
     <script src="../script/CardModal.js"></script>
     <script src="../script/multi.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
