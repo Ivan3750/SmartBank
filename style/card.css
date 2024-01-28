@@ -905,11 +905,19 @@ letter-spacing: 6.25px;
 .back__box{
     scale: 0.8;
 }
-
-
+.create-form-design{
+    justify-content: space-around;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    }
+    .create-form-btn {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 991.98px){
+    
     .create__card{
         flex-direction: column;
         justify-content: center;
@@ -918,14 +926,9 @@ letter-spacing: 6.25px;
     .create__card-form{
         margin: 0;
     }
-    .create-form-design{
-    justify-content: space-around;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    }
+   
     .create-form-btn{
-        margin-top: 50px;
+        margin-top: 40px;
     }
     
     .form__card{
